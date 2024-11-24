@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "properties": {
+        "story": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["title", "text", "images"]
+        },
+        "puzzles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "images": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "hints": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "answer": {
+                        "type": "string"
+                    }
+                },
+                "required": ["title", "text", "images", "hints", "answer"]
+            }
+        }
+    },
+    "required": ["story", "puzzles"]
+}
