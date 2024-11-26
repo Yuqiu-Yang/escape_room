@@ -19,7 +19,7 @@ conda create -n escape_room python=3.8
 - Install the package 
 
 ```shell 
-pip install 
+pip install virtual-escape-room==0.0.1
 ```
 The dependencies of the app is relatively simple and they should be installed along with the package itself. 
 <details>
