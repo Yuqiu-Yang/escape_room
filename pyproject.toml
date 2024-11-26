@@ -1,5 +1,5 @@
 [project]
-name = "escape_room"
+name = "virtual_escape_room"
 version = "0.0.1"
 description = "A basic virtual escape room"
 dependencies = [
