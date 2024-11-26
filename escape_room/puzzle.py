@@ -25,8 +25,9 @@ def index():
     """Method to render homepage."""
     global GAME
     GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
-    session["puzzles_seen_str"] = "<eos>"
-    session['current_puzzle_id'] = "1"
+    if "puzzles_seen_str" not in session:
+        session["puzzles_seen_str"] = "<eos>"
+        session['current_puzzle_id'] = "1"
     return render_template(
         "puzzle/index.html", title=GAME.title, text=GAME.text, images=GAME.images,
     )
