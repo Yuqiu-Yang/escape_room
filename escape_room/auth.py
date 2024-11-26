@@ -82,7 +82,17 @@ def load_logged_in_user():
         
 @bp.route('/logout')
 def logout():
+    db = get_db()
+    db.execute(
+        "DELETE FROM post"
+        " WHERE author_id = ?",
+        (g.user["id"],),
+    )
+    db.commit()
+    session.pop("puzzle_id_", None)
+    session.pop("puzzles_seen_list_", None)
     session.clear()
+    session.permanent = False
     return redirect(url_for('index'))
 
 
@@ -91,7 +101,6 @@ def login_required(view):
     def wrapped_view(**kwargs):
         if g.user is None:
             return redirect(url_for('auth.login'))
-
         return view(**kwargs)
 
     return wrapped_view

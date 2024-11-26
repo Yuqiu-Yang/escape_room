@@ -30,7 +30,8 @@ def create_app(test_config=None):
     
     from . import auth
     app.register_blueprint(auth.bp)
-    
+    from . import notes 
+    app.register_blueprint(notes.bp)
     from . import puzzle
     app.register_blueprint(puzzle.bp)
     app.add_url_rule('/', endpoint='index')

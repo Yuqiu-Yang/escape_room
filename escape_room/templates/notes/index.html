@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}History{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+      <h1 class="display-4">Past Puzzles</h1>
+      <hr class="my-4">
+        {% if puzzles_seen %}
+        {% for puzzle_seen in puzzles_seen %}
+        <div class="container mt-5">
+          <div class="card shadow-sm">
+              <div class="card-header bg-primary text-white">
+                  <h2 class="card-title">Solved puzzle {{ loop.index }}</h2>
+              </div>
+              <div class="card-body">
+                  <p class="card-text" style="white-space: pre-wrap;">{{puzzle_seen | safe}}</p>
+              </div>
+          </div>
+        </div>
+        <hr>
+        {% endfor %}
+        {% endif %}
+        <h1 class="display-4">Notes</h1>
+        {% for post in posts %}
+        <div class="container mt-5">
+          <div class="card shadow-sm">
+              <div class="card-header bg-primary text-white">
+                  <h2 class="card-title">{{ post['title'] }}</h2>
+                  <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+              </div>
+              <div class="card-body">
+                  <p class="card-text">{{ post['body'] }}</p>
+              </div>
+              <div class="card-footer text-muted text-end">
+                  {% if g.user['id'] == post['author_id'] %}
+                    <a href="{{ url_for('notes.update', id=post['id']) }}" class='button'>Edit Post</a>
+                  {% endif %}
+              </div>
+          </div>
+        </div>
+        {% if not loop.last %}
+          <hr>
+        {% endif %}
+        {% endfor %}
+      
+      {% if g.user %}
+      <p class="text-center mt-3">
+        <a class="action" href="{{ url_for('notes.create') }}">Create new note</a>
+      </p>
+      {% endif %}
+      <p class="lead">
+        <a class="btn btn-primary btn" href="{{ current_puzzle }}" role="button">Back to current puzzle</a>
+      </p>
+  </div>
+</div>
+{% endblock %}
