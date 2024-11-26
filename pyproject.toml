@@ -1,6 +1,6 @@
 [project]
 name = "escape_room"
-version = "1.0.0"
+version = "0.0.1"
 description = "A basic virtual escape room"
 dependencies = [
     "flask", "jsonschema"
