@@ -5,7 +5,7 @@
 This is a simple flask-based web application of a virtual escape room mainly to be used as a pedagogical tool. 
 
 ## Try it online 
-Currently, the production version of [the app](ianyangyuqiu.pythonanywhere.com) is being host on [pythonanywhere](https:pythonanywhere.com). Simply register, login and have fun~~~
+Currently, the production version of [the app](https://ianyangyuqiu.pythonanywhere.com) is being host on [pythonanywhere](https://pythonanywhere.com). Simply register, login and have fun~~~
 
 ## Try it locally 
 If you want to build on this project, you can run/test the app on your local machine. Here is how you would this.
