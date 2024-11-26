@@ -1,10 +1,15 @@
 [project]
 name = "virtual_escape_room"
 version = "0.0.1"
+author = "Yuqiu (Ian) Yang"
+author-email = "Yuqiu.Yang@UTSouthwestern.edu"
 description = "A basic virtual escape room"
 dependencies = [
     "flask", "jsonschema"
 ]
+
+[tool.flit.module]
+name = "escape_room" 
 
 [build-system]
 requires = ["flit_core<4"]
@@ -16,3 +21,4 @@ testpaths = ["tests"]
 [tool.coverage.run]
 branch = true
 source = ["escape_room"]
+
