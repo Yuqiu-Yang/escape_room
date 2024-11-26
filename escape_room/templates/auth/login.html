@@ -8,14 +8,16 @@
 <div class="row justify-content-center">
   <div class="col-md-6">
       <h2 class="text-center mb-4">Login</h2>
-      <form method="post">
+      <form method="post" novalidate>
           <div class="mb-3">
               <label for="username" class="form-label">Username</label>
               <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
+              <span id="usernameError" class="error-message">Username can only contain letters, numbers, and underscores.</span>
           </div>
           <div class="mb-3">
               <label for="password" class="form-label">Password</label>
               <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+              <span id="passwordError" class="error-message">Password must be at least 8 characters long, include an uppercase letter, a lower case letter, and a number.</span>
           </div>
           <div class="d-grid">
               <button type="submit" class="btn btn-primary">Login</button>

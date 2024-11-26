@@ -6,7 +6,7 @@ from escape_room.db import get_db
 def test_register(client, app):
     assert client.get('/auth/register').status_code == 200
     response = client.post(
-        '/auth/register', data={'username': 'a', 'password': 'a', 'confirm_password': 'a'}
+        '/auth/register', data={'username': 'a', 'password': 'AAAaaa11', 'confirm_password': 'AAAaaa11'}
     )
     assert response.headers["Location"] == "/auth/login"
 
@@ -19,8 +19,8 @@ def test_register(client, app):
 @pytest.mark.parametrize(('username', 'password', 'confirm_password', 'message'), (
     ('', '','', b'Username is required.'),
     ('a', '', '', b'Password is required and please reenter your password.'),
-    ('a', 'a', 'b', b'Passwords do not match. Please try again.'),
-    ('test', 'test', 'test', b'already registered'),
+    ('a', 'AAAaaa11', 'b', b'Passwords do not match. Please try again.'),
+    ('test', 'AAAaaa11', 'AAAaaa11', b'already registered'),
 ))
 def test_register_validate_input(client, username, password, confirm_password, message):
     response = client.post(
@@ -42,8 +42,8 @@ def test_login(client, auth):
 
 
 @pytest.mark.parametrize(('username', 'password', 'message'), (
-    ('a', 'test', b'Username does not exist. Please register first.'),
-    ('test', 'a', b'Incorrect password.'),
+    ('a', 'AAAaaa11', b'Username does not exist. Please register first.'),
+    ('test', 'AAAaaa1a1', b'Incorrect password.'),
 ))
 def test_login_validate_input(auth, username, password, message):
     response = auth.login(username, password)
