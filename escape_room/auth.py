@@ -25,7 +25,6 @@ def register():
         
         if password != confirm_password:
             error = 'Passwords do not match. Please try again.'
-            return redirect(url_for('auth.register'))
 
         if error is None:
             try:

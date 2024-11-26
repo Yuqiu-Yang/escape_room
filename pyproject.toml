@@ -1,12 +1,18 @@
 [project]
 name = "escape_room"
 version = "1.0.0"
-description = "Escape room"
+description = "A basic virtual escape room"
 dependencies = [
-    "flask",
+    "flask", "jsonschema"
 ]
 
 [build-system]
 requires = ["flit_core<4"]
 build-backend = "flit_core.buildapi"
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["escape_room"]
