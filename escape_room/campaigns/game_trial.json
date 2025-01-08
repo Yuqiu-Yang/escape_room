@@ -1,0 +1,111 @@
+{
+    "story": {
+        "title": "Ebb of Shadows",
+        "text": "In a serene coastal village, an unexplained affliction has spread, leaving residents plagued by confusion, strange behaviors, and haunting gaps in their memories. The once-thriving community is now shrouded in fear as the source of the mysterious illness remains unknown.\nAs a determined investigator, you must delve into the lives of the villagers, exploring their stories, deciphering cryptic patterns, and uncovering hidden connections. With time running out and the mystery deepening, you’ll need all your wits to uncover the truth and bring light to the darkness engulfing the village.\nThe ebb and flow of secrets guide your way—will you uncover the shadows or lose yourself in them?",
+        "images": ["waves.jpg", "sunset.jpg"]
+    },
+    "scenes": [
+        {
+            "title": "Initial Intake",
+            "text": "As a budding outbreak investigator, ",
+            "images": [],
+            "puzzles": [
+                {
+                    "title": "Roadmap",
+                    "text": "Outbreak investigations are like solving a complex puzzle where each piece represents a critical clue. A systematic approach should be followed to uncover the source of an illness.",
+                    "images": [],
+                    "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper"],
+                    "answer": ["3", "1", "2", "4"],
+                    "clues": ["123456"],
+                    "is_end_scene": "False"
+                },
+                {
+                    "title": "Shredded documents",
+                    "text": "",
+                    "images": [],
+                    "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see."],
+                    "answer": [],
+                    "clues": ["ABCDEF"],
+                    "is_end_scene": "False"
+                },
+                {
+                    "title": "Patient records",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "False"
+                },
+                {
+                    "title": "Next step",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "True"
+                }
+            ]
+        },
+        {
+            "title": "Restaurant",
+            "text": "",
+            "images": [],
+            "puzzles": [
+                {
+                    "title": "A \"blank\" note?",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "False"
+                },
+                {
+                    "title": "A feast",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "False"
+                },
+                {
+                    "title": "Next step",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "True"
+                }
+            ]
+        },
+        {
+            "title": "PEI Mussels Farm",
+            "text": "",
+            "images": [],
+            "puzzles": [
+                {
+                    "title": "Acid Trip: The Base-ics of Neutral Reactions",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "False"
+                },
+                {
+                    "title": "Summary",
+                    "text": "",
+                    "images": [],
+                    "hints": [],
+                    "answer": [],
+                    "clues": [],
+                    "is_end_scene": "True"
+                }
+            ]
+        }
+    ]
+}
