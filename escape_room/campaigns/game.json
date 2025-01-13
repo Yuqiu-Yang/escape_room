@@ -1,28 +1,78 @@
 {
     "story": {
-        "title": "It's elementary my dear watson",
-        "text": "Watson's Journal - Entry 221: The elusive criminal mastermind who we only know as Moriarty has given us the slip again. We raided Moriarty's bunker with Detective Inspector Lestrade in search of clues about his wareabouts. Little did we know the bunker would lock down on us with something much worse coming soon. The clock seems to be counting down to something. Its better we solve the clues and get out of this bunker as quickly as possible.",
+        "title": "Ebb of Shadows",
+        "text": "In a serene coastal village, an unexplained affliction has spread, leaving residents plagued by confusion, strange behaviors, and haunting gaps in their memories. The once-thriving community is now shrouded in fear as the source of the mysterious illness remains unknown.\nAs a determined investigator, you must delve into the lives of the villagers, exploring their stories, deciphering cryptic patterns, and uncovering hidden connections. With time running out and the mystery deepening, you’ll need all your wits to uncover the truth and bring light to the darkness engulfing the village.\nThe ebb and flow of secrets guide your way—will you uncover the shadows or lose yourself in them?",
         "images": ["waves.jpg", "sunset.jpg"]
     },
     "puzzles": [{
-        "title": "Who?",
-        "text": "A weird contraption which holds liquid only upto a point. Add any more and the whole lot drains out. An ancient greek philosopher was credited with the design.",
-        "images": ["volcano.jpg"],
-        "hints": ["He was a famous mathematician too.", "Formula to find the length of hypotenuse in a right triange is named after him."],
-        "answer": ["pythagoras", "pythagora"]
+        "title": "Roadmap",
+        "text": "Outbreak investigations are like solving a complex puzzle where each piece represents a critical clue. A systematic approach should be followed to uncover the source of an illness.",
+        "images": ["outbreak_steps.jpg"],
+        "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper"],
+        "answer": ["1,2,3,4,5,6,7,8,9,10"]
     },
     {
-        "title": "Encrypted letter",
-        "text": "Ah! Saying Pythagoras aloud seems to have made this letter drop. May be this letter has the password to get out of this room. Sadly I am not able to read what it says... \"SGHR DMBQXOSHNM HR Z INJD RN HR SGD OZRRVNQC.\"",
-        "images": ["waves.jpg", "sunset.jpg"],
-        "hints": ["Decrypting the letter might help.", "Looks like characters are replaced with their previous character in the alphabet sequence."],
-        "answer": ["joke"]
+        "title": "Shredded documents",
+        "text": "Upon inputting the sequence, you see a four-digit code reveal itself: 3124. Not knowing how to proceed with these numbers, you decide to just write it down and look around in the room.\nAt a corner of the room, you find a colorful crossword puzzle.",
+        "images": ["crossword.jpg"],
+        "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see."],
+        "answer": ["ROYGBIV"]
+    },
+    {
+        "title": "Patient records",
+        "text": "Upon inputting the sequence, you see another four-digit code reveal itself: 3124. Not knowing how to proceed with these numbers, you decide to just write it down and look around in the room.\nAt a corner of the room, you find a pile of patient records.",
+        "images": ["patient_records.jpg"],
+        "hints": [],
+        "answer": ["0.77"]
     },
     {
         "title": "Location, Location, Location",
-        "text": "Finally the password worked and let us out of the room. We are safe for now. But, Moriarty is still in the wind. Looks like he has scribbled a lot on his blackboard. Of all this mess, two things seem to be of importance. The scribble \".- -. - .\", and the values\"a=48.8556, t=2.3522\". Can these tell us where he has headed to?",
-        "images": ["waves.jpg", "sunset.jpg"],
-        "hints": ["The scribble might not be scribble at all. It looks like morse code.", "Wierd word aNtE, does the characters themselves have some significance", "Aha! Substituting values from second equation makes it a GPS co-ordinate."],
-        "answer": ["paris"]
-    }]
+        "text": "Where do you want to go next?",
+        "images": ["next_step.jpg"],
+        "hints": [],
+        "answer": ["Restaurant"]
+    },
+    {
+        "title": "A \"blank\" note?",
+        "text": "A \"blank\" note that has been apprehended from the restaurant owner along with a pile of small synopsis.",
+        "images": [],
+        "hints": [],
+        "answer": ["1.5"]
+    },
+    {
+        "title": "Encoded menu",
+        "text": "",
+        "images": [],
+        "hints": [],
+        "answer": ["ABCD"]
+    },
+    {
+        "title": "Location, Location, Location",
+        "text": "Where do you want to go next?",
+        "images": ["next_step.jpg"],
+        "hints": [],
+        "answer": ["Prince Edward Island"]
+    },
+    {
+        "title": "Budding chemist",
+        "text": "",
+        "images": [],
+        "hints": [],
+        "answer": ["Acidic"]
+    },
+    {
+        "title": "But which one?",
+        "text": "",
+        "images": [],
+        "hints": [],
+        "answer": ["Domoic acid"]
+    },
+    {
+        "title": "Sum it up",
+        "text": "",
+        "images": ["madlib.jpg"],
+        "hints": [],
+        "answer": ["hmmm"]
+    }
+    ]
 }
