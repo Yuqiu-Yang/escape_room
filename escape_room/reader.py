@@ -5,14 +5,17 @@ from uuid import uuid4
 
 import jsonschema
 
-from .room import Game, Puzzle
+from .room import Game, Scene, Puzzle
 
 
 class CampaignReader:
     """Class to validate and extract game details from JSON campaign."""
 
-    STARTING_PUZZLE_KEY: str = "1"
-    FINAL_PUZZLE_KEY: str = "end"
+    STARTING_SCENE_KEY: str="1"
+    FINAL_SCENE_KEY: str="end"
+
+    # STARTING_PUZZLE_KEY: str = "1"
+    # FINAL_PUZZLE_KEY: str = "end"
 
     # Common keys.
     TITLE_KEY: str = "title"
@@ -22,12 +25,18 @@ class CampaignReader:
     # Story keys.
     STORY_KEY: str = "story"
 
+    # List of scenes key 
+    SCENES_KEY: str = "scenes"
+
     # List of puzzles key
     PUZZLES_KEY: str = "puzzles"
 
     # Key in each puzzles.
     PUZZLE_HINTS_KEY: str = "hints"
     PUZZLE_ANSWER_KEY: str = "answer"
+    PUZZLE_CLUES_KEY: str = "clues"
+    PUZZLE_IS_END_SCENE_KEY: str = "is_end_scene"
+
 
     def __init__(self, campaign_file: str) -> None:
         """Constructor.
@@ -64,29 +73,40 @@ class CampaignReader:
     def get_game_from_campaign(self) -> Game:
         """Method to procure game setup from campaign."""
 
-        # Dictionary with puzzles.
-        puzzles: Dict[str, Any] = {}
+        # Dictionary with scenes
+        scenes: Dict[str, Any] = {}
 
-        # Always begin with 1 as the puzzle ID and move through the chain.
-        next_key = CampaignReader.STARTING_PUZZLE_KEY
-        # Keep track of total puzzles to mark end key appropriately.
-        total_steps = len(self.campaign[CampaignReader.PUZZLES_KEY])
-
-        # Iterate through puzzle list and create chained puzzle dictionary.
+        # Always begin with 1 as the scene ID and move through the chain.
+        next_key = CampaignReader.STARTING_SCENE_KEY
+        # Keep track of total scenes to mark end key appropriately.
+        total_steps = len(self.campaign[CampaignReader.SCENES_KEY])  
+        # Iterate through scene list and create chained scene dictionary.
         #
-        # "1": <FirstPuzzle> where <FirstPuzzle>.next_puzzle points to the puzzle
-        # to go to and so on and so forth. With last puzzle having next_puzzle id
+        # "1": <FirstScene> where <FirstScene>.next_scene points to the scene
+        # to go to and so on and so forth. With last scene having next_scene id
         # set to "end"
-        for i, puzzle in enumerate(self.campaign[CampaignReader.PUZZLES_KEY]):
+        for i, scene in enumerate(self.campaign[CampaignReader.SCENES_KEY]):
             key = next_key
             next_key = str(uuid4())
-            puzzles[key] = Puzzle(
-                title=puzzle[CampaignReader.TITLE_KEY],
-                text=puzzle[CampaignReader.TEXT_KEY],
-                images=puzzle[CampaignReader.IMAGES_KEY],
-                hints=puzzle[CampaignReader.PUZZLE_HINTS_KEY],
-                answer=puzzle[CampaignReader.PUZZLE_ANSWER_KEY],
-                next_puzzle=CampaignReader.FINAL_PUZZLE_KEY
+            
+            puzzles: Dict[str, Any] = {}
+            for j, puzzle in enumerate(scene[CampaignReader.PUZZLES_KEY]):
+                puzzles[str(j)] = Puzzle(
+                    title=puzzle[CampaignReader.TITLE_KEY],
+                    text=puzzle[CampaignReader.TEXT_KEY],
+                    images=puzzle[CampaignReader.IMAGES_KEY],
+                    hints=puzzle[CampaignReader.PUZZLE_HINTS_KEY],
+                    answer=puzzle[CampaignReader.PUZZLE_ANSWER_KEY],
+                    clues=puzzle[CampaignReader.PUZZLE_HINTS_KEY],
+                    is_end_scene=puzzle[CampaignReader.PUZZLE_IS_END_SCENE_KEY]
+                ) 
+
+            scenes[key] = Scene(
+                title=scene[CampaignReader.TITLE_KEY],
+                text=scene[CampaignReader.TEXT_KEY],
+                images=scene[CampaignReader.IMAGES_KEY],
+                puzzles=puzzles,
+                next_scene=CampaignReader.FINAL_SCENE_KEY
                 if i == total_steps - 1
                 else next_key,
             )
@@ -95,5 +115,41 @@ class CampaignReader:
             title=self.campaign[CampaignReader.STORY_KEY][CampaignReader.TITLE_KEY],
             text=self.campaign[CampaignReader.STORY_KEY][CampaignReader.TEXT_KEY],
             images=self.campaign[CampaignReader.STORY_KEY][CampaignReader.IMAGES_KEY],
-            puzzles=puzzles,
+            scenes=scenes
         )
+
+
+        # # Dictionary with puzzles.
+        # puzzles: Dict[str, Any] = {}
+
+        # # Always begin with 1 as the puzzle ID and move through the chain.
+        # next_key = CampaignReader.STARTING_PUZZLE_KEY
+        # # Keep track of total puzzles to mark end key appropriately.
+        # total_steps = len(self.campaign[CampaignReader.PUZZLES_KEY])
+
+        # # Iterate through puzzle list and create chained puzzle dictionary.
+        # #
+        # # "1": <FirstPuzzle> where <FirstPuzzle>.next_puzzle points to the puzzle
+        # # to go to and so on and so forth. With last puzzle having next_puzzle id
+        # # set to "end"
+        # for i, puzzle in enumerate(self.campaign[CampaignReader.PUZZLES_KEY]):
+        #     key = next_key
+        #     next_key = str(uuid4())
+        #     puzzles[key] = Puzzle(
+        #         title=puzzle[CampaignReader.TITLE_KEY],
+        #         text=puzzle[CampaignReader.TEXT_KEY],
+        #         images=puzzle[CampaignReader.IMAGES_KEY],
+        #         hints=puzzle[CampaignReader.PUZZLE_HINTS_KEY],
+        #         answer=puzzle[CampaignReader.PUZZLE_ANSWER_KEY],
+        #         next_puzzle=CampaignReader.FINAL_PUZZLE_KEY
+        #         if i == total_steps - 1
+        #         else next_key,
+        #     )
+
+        # return Game(
+        #     title=self.campaign[CampaignReader.STORY_KEY][CampaignReader.TITLE_KEY],
+        #     text=self.campaign[CampaignReader.STORY_KEY][CampaignReader.TEXT_KEY],
+        #     images=self.campaign[CampaignReader.STORY_KEY][CampaignReader.IMAGES_KEY],
+        #     scenes=scenes
+        #     # puzzles=puzzles,
+        # )

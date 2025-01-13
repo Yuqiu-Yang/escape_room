@@ -24,33 +24,36 @@
       .button:hover {
           background-color: darkblue;
       }
-    .error-message {
-        color: red;
-        font-size: 0.9em;
-        display: none; /* Hidden by default */
-    }
+      .hidden-section, #final-puzzle {
+            display: none;
+      }
+      .error-message {
+          color: red;
+          font-size: 0.9em;
+          display: none; /* Hidden by default */
+      }
 
-    .valid-message {
-        color: green;
-        font-size: 0.9em;
-        display: none; /* Hidden by default */
-    }
+      .valid-message {
+          color: green;
+          font-size: 0.9em;
+          display: none; /* Hidden by default */
+      }
 
-    input.is-invalid {
-        border-color: red;
-    }
+      input.is-invalid {
+          border-color: red;
+      }
 
-    input.is-valid {
-        border-color: green;
-    }
-  </style>
-  <script>
-    function adjustWidth() {
-        const input = document.querySelector('#dynamicInput');
-        input.style.width = (input.placeholder.length + 1) + "ch";
-    }
-    window.onload = adjustWidth;
-  </script>
+      input.is-valid {
+          border-color: green;
+      }
+    </style>
+    <script>
+      function adjustWidth() {
+          const input = document.querySelector('#dynamicInput');
+          input.style.width = (input.placeholder.length + 1) + "ch";
+      }
+      window.onload = adjustWidth;
+    </script>
   </head>
   <body style="background-color: #f5f0e1;">
     <!-- Navigation Bar -->

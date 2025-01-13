@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Welcome to our virtual escaperoom~{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">{{scene_title}}</h1>
+        <hr class="my-4">
+        <p>{{scene_text}}</p>
+        {% if scene_images %}
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                {% for img_path in scene_images %}
+                <button type="button" data-bs-target="#dynamicCarousel" data-bs-slide-to="{{ loop.index0 }}" 
+                        class="{% if loop.first %}active{% endif %}" aria-current="{% if loop.first %}true{% endif %}" 
+                        aria-label="Slide {{ loop.index }}"></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                {% for img_path in scene_images %}
+                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                    <img src="{{ url_for('static', filename='puzzle_images/'+img_path) }}" class="d-block w-50 mx-auto" alt="Slide {{ loop.index }}">
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        {% endif %}
+        
+        {% for puzzle_id in intermediate_puzzle_ids %}
+            <div>
+                <h2 class="display-4">{{puzzles[puzzle_id].title}}</h2>
+                <hr class="my-4">
+                <p>{{puzzles[puzzle_id].text}}</p>
+                {% if puzzles[puzzle_id].images %}
+                    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        {% for img_path in puzzles[puzzle_id].images %}
+                        <button type="button" data-bs-target="#dynamicCarousel" data-bs-slide-to="{{ loop.index0 }}" 
+                                class="{% if loop.first %}active{% endif %}" aria-current="{% if loop.first %}true{% endif %}" 
+                                aria-label="Slide {{ loop.index }}"></button>
+                        {% endfor %}
+                    </div>
+                    <div class="carousel-inner">
+                        {% for img_path in puzzles[puzzle_id].images %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <img src="{{ url_for('static', filename='puzzle_images/'+img_path) }}" class="d-block w-50 mx-auto" alt="Slide {{ loop.index }}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+                {% endif %}
+
+                {% if hints %}
+                    {% for hint in puzzles[puzzle_id].hints %}
+                    <br/>
+                    <p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+                        Open hint {{ loop.index }}
+                    </button>
+                    </p>
+                    <div class="collapse mt-3" id="hint{{loop.index}}">
+                        <div class="card card-body">
+                            {{hint}}
+                        </div>
+                    </div>
+                    <br/>
+                    {% endfor %}
+                {% endif %}
+
+                <form class="answer-form" data-section-id="section{{ puzzle_id }}">
+                    <label for="user-input-{{ puzzle_id }}">Enter the correct string:</label>
+                    <input type="text" id="user-input-{{ puzzle_id }}" name="user-input-{{ puzzle_id }}" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="hidden-section-{{ puzzle_id }}" class="hidden-section">
+                <h3>Hidden Section {{ puzzle_id }}</h3>
+                <p>Congratulations! You have revealed Section {{ puzzle_id }}.</p>
+            </div>
+        {% endfor %}
+
+        <!-- Final puzzle -->
+        <div id="final-puzzle">
+            <h2>{{puzzles[final_puzzle_id].title}}</h2>
+            <form id="final-form">
+                <label for="final-input">Enter the final solution:</label>
+                <input type="text" id="final-input" name="final-input" required>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="final-error-message" class="error"></p>
+        </div>
+
+        <form method="post">
+            <p><input type=text id="dynamicInput" name=answer placeholder="Enter your answer here. If there are multiple questions, separate the answers by ';'">
+            <p><input type=submit value="Submit">
+        </form>
+        <p class="lead">
+            <a class="btn btn-primary btn" href="{{ url_for('notes.index') }}" role="button">View past puzzles and notes</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

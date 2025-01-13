@@ -4,11 +4,14 @@
   <h1>{% block title %}Welcome to our virtual escaperoom~{% endblock %}</h1>
 {% endblock %}
 
+
 {% block content %}
 <div class="container">
     <div class="jumbotron">
-        <h1 class="display-4">{{title}}</h1>
+        <h1 class="display-4">Outbreak Investigation</h1>
+        <p class="lead">Work together as a team to find out the sources of the outbreak.</p>
         <hr class="my-4">
+        <p><b>{{title}}</b></p>
         <p>{{text}}</p>
         {% if images %}
             <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -36,31 +39,16 @@
             </button>
             </div>
         {% endif %}
-
-        {% if hints %}
-        {% for hint in hints %}
         <br/>
-        <p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
-            Open hint {{ loop.index }}
-        </button>
-        </p>
-        <div class="collapse mt-3" id="hint{{loop.index}}">
-            <div class="card card-body">
-                {{hint}}
-            </div>
-        </div>
-        <br/>
-        {% endfor %}
+        {% if g.user %}
+            <p class="lead">
+                <a class="btn btn-primary btn" href="/scene/1" role="button">Ready, Set, Go...</a>
+            </p>
+        {% else %}
+            <p class="lead">
+                <a class="btn btn-primary btn" href="{{ url_for('auth.login') }}" role="button">Log in</a>
+            </p>
         {% endif %}
-
-        <form method="post">
-            <p><input type=text id="dynamicInput" name=answer placeholder="Enter your answer here. If there are multiple questions, separate the answers by ';'">
-            <p><input type=submit value="Submit">
-        </form>
-        <p class="lead">
-            <a class="btn btn-primary btn" href="{{ url_for('notes.index') }}" role="button">View past puzzles and notes</a>
-        </p>
     </div>
 </div>
 {% endblock %}

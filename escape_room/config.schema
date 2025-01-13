@@ -19,7 +19,7 @@
             },
             "required": ["title", "text", "images"]
         },
-        "puzzles": {
+        "scenes": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -36,19 +36,52 @@
                             "type": "string"
                         }
                     },
-                    "hints": {
+                    "puzzles": {
                         "type": "array",
                         "items": {
-                            "type": "string"
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "text": {
+                                    "type": "string"
+                                },
+                                "images": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "hints": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "answer": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "clues": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "is_end_scene": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": ["title", "text", "images", "hints", "answer", "clues", "is_end_scene"]
                         }
-                    },
-                    "answer": {
-                        "type": "string"
                     }
                 },
-                "required": ["title", "text", "images", "hints", "answer"]
+                "required": ["title", "text", "images", "puzzles"]
             }
         }
     },
-    "required": ["story", "puzzles"]
+    "required": ["story", "scenes"]
 }

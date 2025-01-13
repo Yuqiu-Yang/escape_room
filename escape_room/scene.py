@@ -14,7 +14,7 @@ from .reader import CampaignReader
 
 from typing import Any, Optional
 
-bp = Blueprint('puzzle', __name__)
+bp = Blueprint('scene', __name__)
 
 EPOCH: datetime.datetime = datetime.datetime(1970, 1, 1)
 START_TIME: datetime.datetime = EPOCH
@@ -29,44 +29,57 @@ def index():
         session["puzzles_seen_str"] = "<eos>"
         session['current_puzzle_id'] = "1"
     return render_template(
-        "puzzle/index.html", title=GAME.title, text=GAME.text, images=GAME.images,
+        "scene/index.html", title=GAME.title, text=GAME.text, images=GAME.images,
     )
 
 
-def get_puzzle(puzzle_id: str) -> Any:
-    """Method to get the puzzle.
+def get_scene(scene_id: str) -> Any:
+    """Method to get the scene.
 
-    :param puzzle_id: ID of the puzzle.
+    :param puzzle_id: ID of the scene.
     """
     global START_TIME
-    if puzzle_id == CampaignReader.STARTING_PUZZLE_KEY and START_TIME == EPOCH:
+    if scene_id == CampaignReader.STARTING_SCENE_KEY and START_TIME == EPOCH:
         START_TIME = datetime.datetime.now()
-    session['current_puzzle_id'] = puzzle_id
-    if GAME and puzzle_id in GAME.puzzles:
-        puzzle = GAME.puzzles[puzzle_id]
+    session['current_puzzle_id'] = scene_id
+    if GAME and scene_id in GAME.scenes:
+        scene = GAME.scenes[scene_id]
+        intermediate_puzzle_ids = [str(i) for i in range(len(scene.puzzles)-1)]
+        final_puzzle_id = str(len(scene.puzzles)-1)
+
         return render_template(
-            "puzzle/puzzle.html",
-            title=puzzle.title,
-            text=puzzle.text,
-            images=puzzle.images,
-            hints=puzzle.hints,
+            "scene/scene.html",
+            scene_title=scene.title,
+            scene_text=scene.text,
+            scene_images=scene.images,
+            puzzles=scene.puzzles,
+            intermediate_puzzle_ids=intermediate_puzzle_ids,
+            final_puzzle_id=final_puzzle_id
         )
     else:
         return redirect("/404")
 
 
-def submit_answer(puzzle_id: str) -> Any:
+def submit_answer(scene_id: str) -> Any:
     """Method to submit answer to the puzzle.
 
     :param puzzle_id: ID of the puzzle.
     """
-    if GAME and puzzle_id in GAME.puzzles:
-        puzzle = GAME.puzzles[puzzle_id]
+    if GAME and puzzle_id in GAME.scenes:
+        scene = GAME.scenes[puzzle_id]
+
+        data = request.get_json()
+        section_id = data.get('section_id')
+        user_input = data.get('user_input', '').strip()
+
+        solutions = [a.strip().lower() for a in scene.answer]
+        solutions = [a for a in solutions if a != ""]
+
+
         answers = request.form["answer"].split(";")
         answers = [a.strip().lower() for a in answers]
         answers = [a for a in answers if a != ""]
-        solutions = [a.strip().lower() for a in puzzle.answer]
-        solutions = [a for a in solutions if a != ""]
+        
         if set(answers) == set(solutions):
             if puzzle.text not in session['puzzles_seen_str']:
                 session['puzzles_seen_str'] += "<strong>Puzzle:</strong><br>{}<br><strong>Answer:</strong><br>{}<eos>".format(puzzle.text, request.form["answer"])
@@ -94,11 +107,11 @@ def submit_answer(puzzle_id: str) -> Any:
         return redirect("/404")
 
 
-@bp.route("/puzzle/<puzzle_id>", methods=["GET", "POST"])
+@bp.route("/scene/<scene_id>", methods=["GET", "POST"])
 @login_required
-def riddler(puzzle_id: str) -> Any:
+def riddler(scene_id: str) -> Any:
     """Method to render the puzzles."""
     if request.method == "GET":
-        return get_puzzle(puzzle_id)
+        return get_scene(scene_id)
     elif request.method == "POST":
-        return submit_answer(puzzle_id)
+        return submit_answer(scene_id)

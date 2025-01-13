@@ -10,8 +10,23 @@ class Puzzle:
     text: str
     images: List[str]
     hints: List[str]
-    answer: str
-    next_puzzle: str
+    answer: List[str]
+    clues: List[str]
+    is_end_scene: str
+    # next_puzzle: str
+
+
+@dataclass 
+class Scene:
+    """Class with individual scene details"""
+
+    title: str
+    text: str
+    images: List[str]
+    # Dictionary of puzzles.
+    puzzles: Dict[str, Puzzle]
+
+    next_scene: str
 
 
 @dataclass
@@ -24,4 +39,4 @@ class Game:
     images: List[str]
 
     # Dictionary of puzzles.
-    puzzles: Dict[str, Puzzle]
+    scenes: Dict[str, Scene]
