@@ -69,15 +69,15 @@
                     </div>
                 {% endif %}
 
-                {% if hints %}
+                {% if puzzles[puzzle_id].hints %}
                     {% for hint in puzzles[puzzle_id].hints %}
                     <br/>
                     <p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint{{puzzle_id}}{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
                         Open hint {{ loop.index }}
                     </button>
                     </p>
-                    <div class="collapse mt-3" id="hint{{loop.index}}">
+                    <div class="collapse mt-3" id="hint{{puzzle_id}}{{loop.index}}">
                         <div class="card card-body">
                             {{hint}}
                         </div>
