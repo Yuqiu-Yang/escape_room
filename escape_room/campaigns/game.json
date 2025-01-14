@@ -1,29 +1,29 @@
 {
     "story": {
         "title": "Ebb of Shadows",
-        "text": "In a serene coastal village, an unexplained affliction has spread, leaving residents plagued by confusion, strange behaviors, and haunting gaps in their memories. The once-thriving community is now shrouded in fear as the source of the mysterious illness remains unknown.\nAs a determined investigator, you must delve into the lives of the villagers, exploring their stories, deciphering cryptic patterns, and uncovering hidden connections. With time running out and the mystery deepening, you’ll need all your wits to uncover the truth and bring light to the darkness engulfing the village.\nThe ebb and flow of secrets guide your way—will you uncover the shadows or lose yourself in them?",
+        "text": "In a serene coastal village, an unexplained affliction has spread, leaving residents plagued by confusion, strange behaviors, and haunting gaps in their memories.\nThe once-thriving community is now shrouded in fear as the source of the mysterious illness remains unknown.\nAs a determined investigator, you must delve into the lives of the villagers, exploring their stories, deciphering cryptic patterns, and uncovering hidden connections.\nWith time running out and the mystery deepening, you’ll need all your wits to uncover the truth and bring light to the darkness engulfing the village.\nThe ebb and flow of secrets guide your way—will you uncover the shadows or lose yourself in them?",
         "images": ["waves.jpg", "sunset.jpg"]
     },
     "puzzles": [{
         "title": "Roadmap",
-        "text": "Outbreak investigations are like solving a complex puzzle where each piece represents a critical clue. A systematic approach should be followed to uncover the source of an illness.",
+        "text": "As a budding outbreak investigator, ready to unravel the mystery, you know that outbreak investigation is like solving a complex puzzle where each piece represents a critical clue.\nAs you navigate through layers of deception, unexpected twists, and time-sensitive decisions, a systematic approach should be followed to uncover the source of the illness.",
         "images": ["outbreak_steps.jpg"],
-        "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper"],
-        "answer": ["1,2,3,4,5,6,7,8,9,10"]
+        "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper", "Why was 10 scared? Because 7-8-9."],
+        "answer": ["1-2-3-4-5-6-7-8-9-10"]
     },
     {
-        "title": "Shredded documents",
-        "text": "Upon inputting the sequence, you see a four-digit code reveal itself: 3124. Not knowing how to proceed with these numbers, you decide to just write it down and look around in the room.\nAt a corner of the room, you find a colorful crossword puzzle.",
+        "title": "Morning routine",
+        "text": "As you organize your thoughts, the pieces of the mystery start to align. Your gaze falls on a familiar toolbox, and a memory clicks into place:\nthe code—1234.\nA simple sequence, but one that feels significant. You jot it down, sensing it might unlock more than just a toolbox later.\nIt's 7 a.m. As the aroma of your morning coffee lingers, you scan the newspaper for clues.\nHeadlines blur past—nothing groundbreaking yet. But then, your eyes land on the crossword puzzle, unusually vibrant today, with squares filled in shades of red, blue, green, etc.. Strange.\nIntrigued, you trace your finger over the clues.",
         "images": ["crossword.jpg"],
-        "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see."],
+        "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see.", "An acronym for acronym is A Contrived Reduction Of Nouns, Yielding Mnemonics."],
         "answer": ["ROYGBIV"]
     },
     {
-        "title": "Patient records",
-        "text": "Upon inputting the sequence, you see another four-digit code reveal itself: 3124. Not knowing how to proceed with these numbers, you decide to just write it down and look around in the room.\nAt a corner of the room, you find a pile of patient records.",
+        "title": "Peculiar delivery",
+        "text": "With the crossword complete, you sit back, satisfied, when something catches your eye.\nAt the bottom of the page, tucked beside the puzzle's border, is a small ad. \nIt reads: \"Seafood Lovers Special! Your favorite catch is on sale—77% off! Simply use code 4567 and call our number to reel in this exclusive deal.\"\nYour stomach rumbles, but your mind spins faster. Why does this ad feel… deliberate? The code, seems eerily specific, like it's meant for more than a discount. Could this be another piece of the puzzle?\nYou grab your phone, call the number, and order your usual, already envisioning the perfect meal—a seafood feast paired with linguine.\nThe doorbell rings. That was fast, you think. But instead of the delivery you were expecting, you find a plain cardboard box waiting for you on the doorstep.\nCuriosity piqued, you bring it inside and open it carefully. Inside is not seafood, but a chaotic pile of patient records. Your heart skips a beat. This wasn't part of the plan.",
         "images": ["patient_records.jpg"],
-        "hints": [],
-        "answer": ["0.77"]
+        "hints": ["Why don't shellfish share their pearls? - Because they're a little shellfish!"],
+        "answer": ["Mussels"]
     },
     {
         "title": "Location, Location, Location",
@@ -34,42 +34,56 @@
     },
     {
         "title": "A \"blank\" note?",
-        "text": "A \"blank\" note that has been apprehended from the restaurant owner along with a pile of small synopsis.",
-        "images": [],
+        "text": "Once you piece together that the mussels were the culprit, you waste no time informing the authorities. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.\nOne officer approaches you with an odd discovery: a blank note found in the restaurant owner’s office. \"We think it’s more than it seems,\" they say, handing it over. You examine it closely. The paper feels heavier than usual, and the edges are slightly frayed. Could it be a hidden message?\nWith the mysterious note offering no immediate answers, you decide to pivot. \"Let’s focus on the bigger picture,\" you say, turning to the officers. \"What other epidemiological evidence do we have?\"",
+        "images": ["odds_ratio.png"],
         "hints": [],
-        "answer": ["1.5"]
+        "answer": ["1.77"]
+    },
+    {
+        "title": "Hidden message",
+        "text": "As you dive deeper into the calculation of the odds ratio, your thoughts keep drifting back to the blank note. It feels out of place, like it’s hiding something. On a whim, you glance at the officer nearby and ask, \"Do you happen to have a UV light?\"\nTo your surprise, she nods, pulling a compact toolbox from her bag. \"The code is 1234\" she adds.\nYour pulse quickens. You shine the UV light over the blank note, and like magic, hidden writing begins to glow. The faint, cryptic text reveals a message: \"destory the vendor list and lock away until further notice - high algal blooms, but i cannot afford to no make this shipment. it should be fine, haven't had a problem before, but just in case...\"\nWhere do you go next?",
+        "images": ["uv_light.jpg"],
+        "hints": [],
+        "answer": ["Office"]
     },
     {
         "title": "Encoded menu",
-        "text": "",
-        "images": [],
+        "text": "You head to the office, searching for the shredder, but it’s locked tight. Frustration bubbles up. But you remember that the owner is terrible with numbers. If set a code, she would’ve written it down somewhere she looks at every day.\nThen it hits you—the restaurant menu. It’s perched prominently on the desk, a daily fixture in her work routine. As you pick it up, something seems off. The items aren’t listed by numbers but by strange, cryptic codes.\nOne entry catches your eye. This must be the code!",
+        "images": ["menu.jpg"],
         "hints": [],
         "answer": ["ABCD"]
     },
     {
+        "title": "Shredder",
+        "text": "You punch in the code from the menu, and with a satisfying click, the office door swings open. Inside, the shredder sits ominously on the desk, its metallic surface glinting under the dim light. But your excitement is short-lived—a padlock secures the shredder, taunting you. Through the transparent bin, you can see shredded paper teasing you with its potential secrets. Could it be the vendor list you’ve been looking for?\nYour mind races. What could the code be? Out of nowhere, your thoughts drift to food, the seafood delivery you have yet to be received—maybe it’s the restaurant’s influence, or perhaps the anticipation of your linguine dinner waiting to be cooked.",
+        "images": ["padlock.jpg"],
+        "hints": [],
+        "answer": ["1234"]
+    },
+    {
         "title": "Location, Location, Location",
-        "text": "Where do you want to go next?",
+        "text": "With the code fresh in your mind, you steady your hand and input it into the padlock. A soft click echoes through the quiet office as the lock releases. You lift the shredder lid, revealing a crumpled vendor list beneath the shredded scraps. Relief washes over you as you gently pull the intact document out, its faintly creased surface hinting at its recent handling.\nScanning the list, you recognize familiar names. This is it!",
         "images": ["next_step.jpg"],
         "hints": [],
         "answer": ["Prince Edward Island"]
     },
     {
         "title": "Budding chemist",
-        "text": "",
-        "images": [],
+        "text": "Arriving at Prince Edward Island, you’re greeted by the serene beauty of the mussel farm, a sharp contrast to the mystery that brought you here. With careful precision, you collect water samples from the farm, paying attention to the areas closest to where the mussels were harvested. The samples are sealed and transported back to a makeshift lab you’ve set up nearby.\nSitting down, you begin your analysis, focusing on the chemical properties of the water.",
+        "images": ["litmus.jpg"],
         "hints": [],
         "answer": ["Acidic"]
     },
     {
         "title": "But which one?",
-        "text": "",
-        "images": [],
+        "text": "It's acidic! But which one?",
+        "images": ["chromatograms.jpg"],
         "hints": [],
         "answer": ["Domoic acid"]
     },
     {
         "title": "Sum it up",
-        "text": "",
+        "text": "Your tests quickly reveal the culprit: elevated levels of domoic acid, a neurotoxin produced by certain species of marine diatoms like Pseudo-nitzschia. The chemical structure of domoic acid allows it to bind to glutamate receptors in the brain, overstimulating neurons and causing symptoms like memory loss, confusion, and in severe cases, seizures.\nAs you compare your findings to case reports from the outbreak, everything clicks. The mussels had bioaccumulated the toxin from the water, turning a simple seafood dish into a dangerous meal. Armed with this evidence, you prepare to notify the authorities and the farm owners, ensuring the affected batch is recalled and public safety measures are put in place.",
         "images": ["madlib.jpg"],
         "hints": [],
         "answer": ["hmmm"]

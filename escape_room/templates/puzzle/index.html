@@ -12,7 +12,7 @@
         <p class="lead">Work together as a team to find out the sources of the outbreak.</p>
         <hr class="my-4">
         <p><b>{{title}}</b></p>
-        <p>{{text}}</p>
+        <p>{{text.replace('\n', '</p><p>')|safe}}</p>
         {% if images %}
             <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">

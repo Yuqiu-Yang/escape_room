@@ -76,9 +76,18 @@ def submit_answer(puzzle_id: str) -> Any:
                 seconds = seconds % 60
                 hours = minutes // 60
                 minutes = minutes % 60
+                timetaken = f"{hours} hours {minutes} minutes {seconds} seconds"
+                
+                db = get_db()
+                db.execute(
+                    "INSERT INTO completions (user_id, start_time, time_taken) VALUES (?, ?, ?)",
+                    (g.user["id"], START_TIME.isoformat(), timetaken),
+                )
+                db.commit()
+
                 return render_template(
                     "puzzle/winner.html",
-                    timetaken=f"{hours} hours {minutes} minutes {seconds} seconds",
+                    timetaken=timetaken,
                 )
             else:
                 return redirect(f"/puzzle/{puzzle.next_puzzle}")
