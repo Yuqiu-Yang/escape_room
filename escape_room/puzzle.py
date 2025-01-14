@@ -18,16 +18,18 @@ bp = Blueprint('puzzle', __name__)
 
 EPOCH: datetime.datetime = datetime.datetime(1970, 1, 1)
 START_TIME: datetime.datetime = EPOCH
-GAME: Optional[Game] = None
+# GAME: Optional[Game] = None
 
 @bp.route("/")
 def index():
     """Method to render homepage."""
-    global GAME
-    GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
+    # global GAME
+    if "GAME" not in session:
+        session['GAME'] = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
     if "puzzles_seen_str" not in session:
         session["puzzles_seen_str"] = "<eos>"
         session['current_puzzle_id'] = "1"
+    GAME = session['GAME']
     return render_template(
         "puzzle/index.html", title=GAME.title, text=GAME.text, images=GAME.images,
     )
@@ -42,6 +44,7 @@ def get_puzzle(puzzle_id: str) -> Any:
     if puzzle_id == CampaignReader.STARTING_PUZZLE_KEY and START_TIME == EPOCH:
         START_TIME = datetime.datetime.now()
     session['current_puzzle_id'] = puzzle_id
+    GAME = session['GAME']
     if GAME and puzzle_id in GAME.puzzles:
         puzzle = GAME.puzzles[puzzle_id]
         return render_template(
@@ -63,6 +66,7 @@ def submit_answer(puzzle_id: str) -> Any:
 
     :param puzzle_id: ID of the puzzle.
     """
+    GAME = session['GAME']
     if GAME and puzzle_id in GAME.puzzles:
         puzzle = GAME.puzzles[puzzle_id]
         answers = request.form["answer"].split(";")
