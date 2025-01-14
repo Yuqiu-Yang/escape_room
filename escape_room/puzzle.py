@@ -52,6 +52,7 @@ def get_puzzle(puzzle_id: str) -> Any:
             hints=puzzle.hints,
         )
     else:
+        print("get error")
         print(GAME.puzzles)
         print(puzzle_id)
         return redirect("/404")
@@ -92,6 +93,8 @@ def submit_answer(puzzle_id: str) -> Any:
                     timetaken=timetaken,
                 )
             else:
+                print("Current puzzle is " + puzzle_id)
+                print("Next puzzle is " + puzzle.next_puzzle)
                 return redirect(f"/puzzle/{puzzle.next_puzzle}")
         else:
             return render_template(
@@ -102,6 +105,7 @@ def submit_answer(puzzle_id: str) -> Any:
                 hints=puzzle.hints,
             )
     else:
+        print("submit error")
         print(GAME.puzzles)
         print(puzzle_id)
         return redirect("/404")
