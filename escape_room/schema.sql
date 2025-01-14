@@ -4,6 +4,8 @@
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS post;
 DROP TABLE IF EXISTS completions;
+DROP TABLE IF EXISTS temp;
+
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,4 +28,9 @@ CREATE TABLE completions (
   start_time TEXT NOT NULL,
   time_taken TEXT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES user (id)
+);
+
+CREATE TABLE temp (
+  id INTEGER NOT NULL,
+  puzzles_seen_str TEXT NOT NULL
 );

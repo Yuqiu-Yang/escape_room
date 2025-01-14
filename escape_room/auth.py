@@ -88,8 +88,13 @@ def logout():
         (g.user["id"],),
     )
     db.commit()
+    db = get_db()
+    db.execute(
+        "DELETE FROM temp"
+    )
+    db.commit()
     session.pop("puzzle_id_", None)
-    session.pop("puzzles_seen_list_", None)
+    # session.pop("puzzles_seen_list_", None)
     session.clear()
     session.permanent = False
     return redirect(url_for('index'))

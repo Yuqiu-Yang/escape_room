@@ -17,8 +17,14 @@ bp = Blueprint('notes', __name__)
 @bp.route("/notes", methods=["GET", "POST"])
 @login_required
 def index():
-    
-    puzzles_seen_list_ = session['puzzles_seen_str'].split("<eos>")
+    puzzles_seen_str = (
+        get_db()
+        .execute(
+            "SELECT * FROM temp"
+        )
+        .fetchone()
+    )
+    puzzles_seen_list_ = puzzles_seen_str['puzzles_seen_str'].split("<eos>")
     puzzles_seen_list_.pop(0)
     puzzles_seen_list_.pop(-1)
     if len(puzzles_seen_list_) == 0:

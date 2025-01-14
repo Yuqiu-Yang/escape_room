@@ -25,8 +25,23 @@ def index():
     """Method to render homepage."""
     global GAME
     GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
-    if "puzzles_seen_str" not in session:
-        session["puzzles_seen_str"] = "<eos>"
+    db = get_db()
+    puzzles_seen_str = (
+        get_db()
+        .execute(
+            "SELECT * FROM temp"
+        )
+        .fetchone()
+    )
+    if puzzles_seen_str is None:
+        db = get_db()
+        db.execute(
+            "INSERT INTO temp (id, puzzles_seen_str) VALUES (?, ?)",
+            ("1", "<eos>"),
+        )
+        db.commit()
+    if "current_puzzle_id" not in session:
+        # session["puzzles_seen_str"] = "<eos>"
         session['current_puzzle_id'] = "1"
     return render_template(
         "puzzle/index.html", title=GAME.title, text=GAME.text, images=GAME.images,
@@ -52,9 +67,6 @@ def get_puzzle(puzzle_id: str) -> Any:
             hints=puzzle.hints,
         )
     else:
-        print("get error")
-        print(GAME.puzzles)
-        print(puzzle_id)
         return redirect("/404")
 
 
@@ -71,8 +83,21 @@ def submit_answer(puzzle_id: str) -> Any:
         solutions = [a.strip().lower() for a in puzzle.answer]
         solutions = [a for a in solutions if a != ""]
         if set(answers) == set(solutions):
-            if puzzle.text not in session['puzzles_seen_str']:
-                session['puzzles_seen_str'] += "<strong>Puzzle:</strong><br>{}<br><strong>Answer:</strong><br>{}<eos>".format(puzzle.text, request.form["answer"])
+            db = get_db()
+            puzzles_seen_str = (
+                get_db()
+                .execute(
+                    "SELECT * FROM temp"
+                )
+                .fetchone()
+            )
+            if puzzle.text not in puzzles_seen_str['puzzles_seen_str']:
+                temp_str = puzzles_seen_str['puzzles_seen_str'] + "<strong>Puzzle:</strong><br>{}<br><strong>Answer:</strong><br>{}<eos>".format(puzzle.text, request.form["answer"])
+                db = get_db()
+                db.execute(
+                    "UPDATE temp SET puzzles_seen_str = ? WHERE id = 1", (str(temp_str),)
+                )
+                db.commit()
             if puzzle.next_puzzle == CampaignReader.FINAL_PUZZLE_KEY:
                 seconds = int((datetime.datetime.now() - START_TIME).total_seconds())
                 minutes = seconds // 60
@@ -93,8 +118,6 @@ def submit_answer(puzzle_id: str) -> Any:
                     timetaken=timetaken,
                 )
             else:
-                print("Current puzzle is " + puzzle_id)
-                print("Next puzzle is " + puzzle.next_puzzle)
                 return redirect(f"/puzzle/{puzzle.next_puzzle}")
         else:
             return render_template(
@@ -105,9 +128,6 @@ def submit_answer(puzzle_id: str) -> Any:
                 hints=puzzle.hints,
             )
     else:
-        print("submit error")
-        print(GAME.puzzles)
-        print(puzzle_id)
         return redirect("/404")
 
 
