@@ -52,6 +52,8 @@ def get_puzzle(puzzle_id: str) -> Any:
             hints=puzzle.hints,
         )
     else:
+        print(GAME.puzzles)
+        print(puzzle_id)
         return redirect("/404")
 
 
@@ -77,7 +79,7 @@ def submit_answer(puzzle_id: str) -> Any:
                 hours = minutes // 60
                 minutes = minutes % 60
                 timetaken = f"{hours} hours {minutes} minutes {seconds} seconds"
-                
+
                 db = get_db()
                 db.execute(
                     "INSERT INTO completions (user_id, start_time, time_taken) VALUES (?, ?, ?)",
