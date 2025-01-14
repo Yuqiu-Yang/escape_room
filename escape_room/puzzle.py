@@ -102,6 +102,8 @@ def submit_answer(puzzle_id: str) -> Any:
                 hints=puzzle.hints,
             )
     else:
+        print(GAME.puzzles)
+        print(puzzle_id)
         return redirect("/404")
 
 
