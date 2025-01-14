@@ -13,28 +13,28 @@
                 {
                     "title": "Roadmap",
                     "text": "Outbreak investigations are like solving a complex puzzle where each piece represents a critical clue. A systematic approach should be followed to uncover the source of an illness.",
-                    "images": [],
+                    "images": ["waves.jpg", "sunset.jpg"],
                     "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper"],
-                    "answer": ["3", "1", "2", "4"],
-                    "clues": ["123456"],
+                    "answer": ["1;2;3;4"],
+                    "clues": "Upon entering the answer, you see a code: 123456",
                     "is_end_scene": "False"
                 },
                 {
                     "title": "Shredded documents",
                     "text": "",
-                    "images": [],
+                    "images": ["waves.jpg", "sunset.jpg"],
                     "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see."],
-                    "answer": [],
-                    "clues": ["ABCDEF"],
+                    "answer": ["1;2;3;4"],
+                    "clues": "ABCDEF",
                     "is_end_scene": "False"
                 },
                 {
                     "title": "Patient records",
                     "text": "",
-                    "images": [],
+                    "images": ["waves.jpg", "sunset.jpg"],
                     "hints": [],
-                    "answer": [],
-                    "clues": [],
+                    "answer": ["1;2;3;4"],
+                    "clues": "ABCDEF",
                     "is_end_scene": "False"
                 },
                 {

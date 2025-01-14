@@ -25,6 +25,12 @@ def index():
     """Method to render homepage."""
     global GAME
     GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
+    if "game_state" not in session: 
+        session['game_state'] = {
+            "current_scene_id": "1",
+            "progress": {scene_id: [False for _ in scene.puzzles] for scene_id, scene in GAME.scenes.items()}
+        }
+    
     if "puzzles_seen_str" not in session:
         session["puzzles_seen_str"] = "<eos>"
         session['current_puzzle_id'] = "1"
@@ -41,9 +47,11 @@ def get_scene(scene_id: str) -> Any:
     global START_TIME
     if scene_id == CampaignReader.STARTING_SCENE_KEY and START_TIME == EPOCH:
         START_TIME = datetime.datetime.now()
+    session['game_state']['current_scene_id'] = scene_id
     session['current_puzzle_id'] = scene_id
     if GAME and scene_id in GAME.scenes:
         scene = GAME.scenes[scene_id]
+        progress = session['game_state']['progress'][scene_id]
         intermediate_puzzle_ids = [str(i) for i in range(len(scene.puzzles)-1)]
         final_puzzle_id = str(len(scene.puzzles)-1)
 
@@ -65,8 +73,8 @@ def submit_answer(scene_id: str) -> Any:
 
     :param puzzle_id: ID of the puzzle.
     """
-    if GAME and puzzle_id in GAME.scenes:
-        scene = GAME.scenes[puzzle_id]
+    if GAME and scene_id in GAME.scenes:
+        scene = GAME.scenes[scene_id]
 
         data = request.get_json()
         section_id = data.get('section_id')
