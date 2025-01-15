@@ -30,7 +30,9 @@ CREATE TABLE completions (
   FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
+
 CREATE TABLE temp (
   id INTEGER NOT NULL,
   puzzles_seen_str TEXT NOT NULL
 );
+

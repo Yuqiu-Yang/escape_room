@@ -1,8 +1,12 @@
 import sqlite3
+import os 
+import pickle
 from datetime import datetime
 
 import click
 from flask import current_app, g
+from .reader import CampaignReader
+
 
 
 def get_db():
@@ -28,6 +32,11 @@ def init_db():
 
     with current_app.open_resource('schema.sql') as f:
         db.executescript(f.read().decode('utf8'))
+        
+    GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
+    with open(os.path.join(os.path.dirname(__file__), '../instance/game.pickle'), 'wb') as handle:
+        pickle.dump(GAME, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    
 
 
 @click.command('init-db')
