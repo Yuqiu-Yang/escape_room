@@ -17,15 +17,10 @@ from typing import Any, Optional
 
 bp = Blueprint('puzzle', __name__)
 
-EPOCH: datetime.datetime = datetime.datetime(1970, 1, 1)
-START_TIME: datetime.datetime = EPOCH
-# GAME: Optional[Game] = None
 
 @bp.route("/")
 def index():
     """Method to render homepage."""
-    # global GAME
-    # GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
     with open(os.path.join(os.path.dirname(__file__), '../instance/game.pickle'), 'rb') as handle:
          GAME = pickle.load(handle)
     
@@ -38,6 +33,7 @@ def index():
         .fetchone()
     )
     if puzzles_seen_str is None:
+        # If this is None, then this is truly the first time 
         db = get_db()
         db.execute(
             "INSERT INTO temp (id, puzzles_seen_str) VALUES (?, ?)",
@@ -57,9 +53,25 @@ def get_puzzle(puzzle_id: str) -> Any:
 
     :param puzzle_id: ID of the puzzle.
     """
-    global START_TIME
-    if puzzle_id == CampaignReader.STARTING_PUZZLE_KEY and START_TIME == EPOCH:
-        START_TIME = datetime.datetime.now()
+    if puzzle_id == CampaignReader.STARTING_PUZZLE_KEY:
+        progress = (
+            get_db()
+            .execute(
+                "SELECT * "
+                " FROM completions c"
+                " WHERE c.user_id = ? AND c.time_taken = 'in_progress'",
+                (g.user["id"],),
+            ).fetchone()
+        )
+        if progress is None:
+            START_TIME = datetime.datetime.now()
+            db = get_db()
+            db.execute(
+                "INSERT INTO completions (user_id, start_time, time_taken) VALUES (?, ?, ?)",
+                (g.user["id"], START_TIME.isoformat(), "in_progress"),
+            )
+            db.commit() 
+
     session['current_puzzle_id'] = puzzle_id
     with open(os.path.join(os.path.dirname(__file__), '../instance/game.pickle'), 'rb') as handle:
          GAME = pickle.load(handle)
@@ -107,17 +119,25 @@ def submit_answer(puzzle_id: str) -> Any:
                 )
                 db.commit()
             if puzzle.next_puzzle == CampaignReader.FINAL_PUZZLE_KEY:
+                progress = (
+                    get_db()
+                    .execute(
+                        "SELECT * "
+                        " FROM completions c"
+                        " WHERE c.user_id = ? AND c.time_taken = 'in_progress'",
+                        (g.user["id"],),
+                    ).fetchone()
+                )
+                START_TIME = datetime.datetime.fromisoformat(progress['start_time'])
                 seconds = int((datetime.datetime.now() - START_TIME).total_seconds())
                 minutes = seconds // 60
                 seconds = seconds % 60
                 hours = minutes // 60
                 minutes = minutes % 60
                 timetaken = f"{hours} hours {minutes} minutes {seconds} seconds"
-
                 db = get_db()
                 db.execute(
-                    "INSERT INTO completions (user_id, start_time, time_taken) VALUES (?, ?, ?)",
-                    (g.user["id"], START_TIME.isoformat(), timetaken),
+                    "UPDATE completions SET time_taken = ? WHERE user_id = ? and time_taken = 'in_progress'", (timetaken, g.user['id'])
                 )
                 db.commit()
 
