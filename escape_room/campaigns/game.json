@@ -20,8 +20,8 @@
     },
     {
         "title": "Peculiar delivery",
-        "text": "With the crossword complete, you sit back, satisfied, when something catches your eye.\nAt the bottom of the page, tucked beside the puzzle's border, is a small ad. \nIt reads: \"Seafood Lovers Special! Your favorite catch is on sale—77% off! Simply use code 4567 and call our number to reel in this exclusive deal.\"\nYour stomach rumbles, but your mind spins faster. Why does this ad feel… deliberate? The code, seems eerily specific, like it's meant for more than a discount. Could this be another piece of the puzzle?\nYou grab your phone, call the number, and order your usual, already envisioning the perfect meal—a seafood feast paired with linguine.\nThe doorbell rings. That was fast, you think. But instead of the delivery you were expecting, you find a plain cardboard box waiting for you on the doorstep.\nCuriosity piqued, you bring it inside and open it carefully. Inside is not seafood, but a chaotic pile of patient records. Your heart skips a beat. This wasn't part of the plan.",
-        "images": ["patient_records.jpg"],
+        "text": "With the crossword complete, you sit back, satisfied, when something catches your eye.\nAt the bottom of the page, tucked beside the puzzle's border, is a small ad. \nIt reads: \"Seafood Lovers Special! Your favorite catch is on sale—77% off! Simply use code 4567 and call our number to reel in this exclusive deal.\"\nYour stomach rumbles, but your mind spins faster. Why does this ad feel… deliberate? The code, seems eerily specific, like it's meant for more than a discount. Could this be another piece of the puzzle?\nYou grab your phone, call the number, and order your usual, already envisioning the perfect meal—a seafood feast paired with linguine.\nThe doorbell rings. That was fast, you think. But instead of the delivery you were expecting, you find a plain cardboard box waiting for you on the doorstep.\nCuriosity piqued, you bring it inside and open it carefully. Inside is not seafood, but a flash disk with what appears to be an <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://www.google.com\">url</a>. Your heart skips a beat. This wasn't part of the plan.\nPlugging it into your laptop, the screen flickers to life. Curiosity bubbling, you open the folder labeled \"Confidential\", spot a video file titled \"Interview.mp4.\", and click play. That's the culprit!",
+        "images": ["video.jpg"],
         "hints": ["Why don't shellfish share their pearls? - Because they're a little shellfish!"],
         "answer": ["Mussels"]
     },
@@ -34,10 +34,10 @@
     },
     {
         "title": "A \"blank\" note?",
-        "text": "Once you piece together that the mussels were the culprit, you waste no time informing the authorities. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.\nOne officer approaches you with an odd discovery: a blank note found in the restaurant owner’s office. \"We think it’s more than it seems,\" they say, handing it over. You examine it closely. The paper feels heavier than usual, and the edges are slightly frayed. Could it be a hidden message?\nWith the mysterious note offering no immediate answers, you decide to pivot. \"Let’s focus on the bigger picture,\" you say, turning to the officers. \"What other epidemiological evidence do we have?\"",
+        "text": "Once you piece together that the mussels were the culprit, you waste no time informing the authorities. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.\nOne officer approaches you with an odd discovery: a blank note found in the restaurant owner’s office. \"We think it’s more than it seems. The own must not be around much. The office is empty with only a desk and a shredder. By the way, when we left, the office door locked behind us,\" they say, handing it over. You examine it closely. The paper feels heavier than usual, and the edges are slightly frayed. Could it be a hidden message?\nWith the mysterious note offering no immediate answers, you decide to pivot. \"Let’s focus on the bigger picture,\" you say, turning to the officers. \"What other epidemiological evidence do we have?\"",
         "images": ["odds_ratio.png"],
         "hints": [],
-        "answer": ["1.77"]
+        "answer": ["1.77","0.77"]
     },
     {
         "title": "Hidden message",
@@ -80,13 +80,6 @@
         "images": ["chromatograms.jpg"],
         "hints": [],
         "answer": ["Domoic acid"]
-    },
-    {
-        "title": "Sum it up",
-        "text": "Your tests quickly reveal the culprit: elevated levels of domoic acid, a neurotoxin produced by certain species of marine diatoms like Pseudo-nitzschia. The chemical structure of domoic acid allows it to bind to glutamate receptors in the brain, overstimulating neurons and causing symptoms like memory loss, confusion, and in severe cases, seizures.\nAs you compare your findings to case reports from the outbreak, everything clicks. The mussels had bioaccumulated the toxin from the water, turning a simple seafood dish into a dangerous meal. Armed with this evidence, you prepare to notify the authorities and the farm owners, ensuring the affected batch is recalled and public safety measures are put in place.",
-        "images": ["madlib.jpg"],
-        "hints": [],
-        "answer": ["hmmm"]
     }
     ]
 }

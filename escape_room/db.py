@@ -32,18 +32,25 @@ def init_db():
 
     with current_app.open_resource('schema.sql') as f:
         db.executescript(f.read().decode('utf8'))
-        
+
+def init_game():
     GAME = CampaignReader(os.path.join(os.path.dirname(__file__),"./campaigns/game.json")).get_game_from_campaign()
     with open(os.path.join(os.path.dirname(__file__), '../instance/game.pickle'), 'wb') as handle:
         pickle.dump(GAME, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
-
 
 @click.command('init-db')
 def init_db_command():
     """Clear the existing data and create new tables."""
     init_db()
     click.echo('Initialized the database.')
+
+
+@click.command('init-game')
+def init_game_command():
+    """Clear the existing game and create new game."""
+    init_game()
+    click.echo('Initialized the game.')
 
 
 sqlite3.register_converter(
@@ -53,3 +60,4 @@ sqlite3.register_converter(
 def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
+    app.cli.add_command(init_game_command)
