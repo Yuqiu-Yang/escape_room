@@ -23,26 +23,28 @@ def index():
     """Method to render homepage."""
     with open(os.path.join(os.path.dirname(__file__), '../instance/game.pickle'), 'rb') as handle:
          GAME = pickle.load(handle)
-    
-    db = get_db()
-    puzzles_seen_str = (
-        get_db()
-        .execute(
-            "SELECT * FROM temp"
-        )
-        .fetchone()
-    )
-    if puzzles_seen_str is None:
-        # If this is None, then this is truly the first time 
+    if session.get('user_id') is not None: 
         db = get_db()
-        db.execute(
-            "INSERT INTO temp (id, puzzles_seen_str) VALUES (?, ?)",
-            ("1", "<eos>"),
+        puzzles_seen_str = (
+            get_db()
+            .execute(
+                "SELECT * FROM temp"
+                " WHERE id = ?",
+                (g.user["id"],),
+            )
+            .fetchone()
         )
-        db.commit()
-    if "current_puzzle_id" not in session:
-        # session["puzzles_seen_str"] = "<eos>"
-        session['current_puzzle_id'] = "1"
+        if puzzles_seen_str is None:
+            # If this is None, then this is truly the first time 
+            db = get_db()
+            db.execute(
+                "INSERT INTO temp (id, puzzles_seen_str) VALUES (?, ?)",
+                (g.user["id"], "<eos>"),
+            )
+            db.commit()
+        if "current_puzzle_id" not in session:
+            # session["puzzles_seen_str"] = "<eos>"
+            session['current_puzzle_id'] = "1"
     return render_template(
         "puzzle/index.html", title=GAME.title, text=GAME.text, images=GAME.images,
     )
@@ -108,6 +110,8 @@ def submit_answer(puzzle_id: str) -> Any:
                 get_db()
                 .execute(
                     "SELECT * FROM temp"
+                    " WHERE id = ?",
+                    (g.user["id"],),
                 )
                 .fetchone()
             )
@@ -115,7 +119,7 @@ def submit_answer(puzzle_id: str) -> Any:
                 temp_str = puzzles_seen_str['puzzles_seen_str'] + "<strong>Puzzle:</strong><br>{}<br><strong>Answer:</strong><br>{}<eos>".format(puzzle.text, request.form["answer"])
                 db = get_db()
                 db.execute(
-                    "UPDATE temp SET puzzles_seen_str = ? WHERE id = 1", (str(temp_str),)
+                    "UPDATE temp SET puzzles_seen_str = ? WHERE id = ?", (str(temp_str),g.user["id"])
                 )
                 db.commit()
             if puzzle.next_puzzle == CampaignReader.FINAL_PUZZLE_KEY:

@@ -32,7 +32,7 @@ CREATE TABLE completions (
 
 
 CREATE TABLE temp (
-  id INTEGER NOT NULL,
+  id INTEGER UNIQUE NOT NULL,
   puzzles_seen_str TEXT NOT NULL
 );
 

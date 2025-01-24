@@ -91,6 +91,8 @@ def logout():
     db = get_db()
     db.execute(
         "DELETE FROM temp"
+        " WHERE id = ?", 
+        (g.user["id"],),
     )
     db.commit()
     session.pop("puzzle_id_", None)
