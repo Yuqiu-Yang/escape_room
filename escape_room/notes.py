@@ -21,6 +21,8 @@ def index():
         get_db()
         .execute(
             "SELECT * FROM temp"
+            " WHERE id = ?",
+            (g.user["id"],),
         )
         .fetchone()
     )
