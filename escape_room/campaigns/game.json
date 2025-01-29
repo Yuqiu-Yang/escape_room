@@ -14,7 +14,7 @@
     {
         "title": "Morning routine",
         "text": "As you organize your thoughts, the pieces of the mystery start to align. Your gaze falls on a familiar toolbox, and a memory clicks into place:\nthe code—1234.\nA simple sequence, but one that feels significant. You jot it down, sensing it might unlock more than just a toolbox later.\nIt's 7 a.m. As the aroma of your morning coffee lingers, you scan the newspaper for clues.\nHeadlines blur past—nothing groundbreaking yet. But then, your eyes land on the crossword puzzle, unusually vibrant today, with squares filled in shades of red, blue, green, etc.. Strange.\nIntrigued, you trace your finger over the clues.",
-        "images": ["crossword.jpg"],
+        "images": ["crossword.png"],
         "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see.", "An acronym for acronym is A Contrived Reduction Of Nouns, Yielding Mnemonics."],
         "answer": ["ROYGBIV"]
     },
@@ -49,7 +49,7 @@
     {
         "title": "Encoded menu",
         "text": "You head to the office, searching for the shredder, but it’s locked tight. Frustration bubbles up. But you remember that the owner is terrible with numbers. If set a code, she would’ve written it down somewhere she looks at every day.\nThen it hits you—the restaurant menu. It’s perched prominently on the desk, a daily fixture in her work routine. As you pick it up, something seems off. The items aren’t listed by numbers but by strange, cryptic codes.\nOne entry catches your eye. This must be the code!",
-        "images": ["menu.jpg"],
+        "images": ["menu.png"],
         "hints": [],
         "answer": ["ABCD"]
     },
@@ -77,7 +77,7 @@
     {
         "title": "But which one?",
         "text": "It's acidic! But which one?",
-        "images": ["chromatograms.jpg"],
+        "images": ["Potassium Hydroxide.png", "Benzylamine.png", "Nitroaniline.png", "Domoic Acid.png", "Citric Acid.png", "Malic Acid.png", "Thiourea.png", "Benzyl Alcohol.png", "Toluene.png"],
         "hints": [],
         "answer": ["Domoic acid"]
     }
