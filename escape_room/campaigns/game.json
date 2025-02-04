@@ -1,63 +1,63 @@
 {
     "story": {
-        "title": "Ebb of Shadows",
-        "text": "In a serene coastal village, an unexplained affliction has spread, leaving residents plagued by confusion, strange behaviors, and haunting gaps in their memories.\nThe once-thriving community is now shrouded in fear as the source of the mysterious illness remains unknown.\nAs a determined investigator, you must delve into the lives of the villagers, exploring their stories, deciphering cryptic patterns, and uncovering hidden connections.\nWith time running out and the mystery deepening, you’ll need all your wits to uncover the truth and bring light to the darkness engulfing the village.\nThe ebb and flow of secrets guide your way—will you uncover the shadows or lose yourself in them?",
+        "title": "Your Call to Action",
+        "text": "Good morning, epidemiology Team. Thank you for taking the time to be here. As you know I am Jennifer Shuford, the Commissioner of the Texas Department of Health and Human Services.\nWe've just received an urgent report of a rapidly unfolding public health crisis and I need your help. We have a cluster of critically ill patients, and we may have an outbreak, but we are not sure.  I need your investigative skills to help sort through this.  The situation is escalating quickly, the governor wants answers now and CNN is calling me. I am getting reports from many regions and cases are climbing, and we need answers—now! The clock is ticking, and lives are at stake, we do not have much time.\nThat's why we're calling on you, our brightest and most talented epidemiology team, to step into action. Your mission: determine if there is an outbreak and if so investigate the source, define the cases, identify the agent, and recommend containment strategies so we can protect our public.  We need to stop this situation in its tracks.\nYou have limited time, the needed critical resources, and only your expertise to guide you. The health of Texans depends on you. We’re counting on you to solve the mystery and provide me with guidance needed to implement any measures needed to protect the public.\nThank you and good luck—get to work.",
         "images": ["waves.jpg", "sunset.jpg"]
     },
     "puzzles": [{
         "title": "Roadmap",
         "text": "As a budding outbreak investigator, ready to unravel the mystery, you know that outbreak investigation is like solving a complex puzzle where each piece represents a critical clue.\nAs you navigate through layers of deception, unexpected twists, and time-sensitive decisions, a systematic approach should be followed to uncover the source of the illness.",
-        "images": ["outbreak_steps.jpg"],
+        "images": ["sherlock_holmes.jpg"],
         "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper", "Why was 10 scared? Because 7-8-9."],
-        "answer": ["1-2-3-4-5-6-7-8-9-10"]
+        "answer": ["J-I-9-17-7-S-H-4-P-13"]
     },
     {
         "title": "Morning routine",
-        "text": "As you organize your thoughts, the pieces of the mystery start to align. Your gaze falls on a familiar toolbox, and a memory clicks into place:\nthe code—1234.\nA simple sequence, but one that feels significant. You jot it down, sensing it might unlock more than just a toolbox later.\nIt's 7 a.m. As the aroma of your morning coffee lingers, you scan the newspaper for clues.\nHeadlines blur past—nothing groundbreaking yet. But then, your eyes land on the crossword puzzle, unusually vibrant today, with squares filled in shades of red, blue, green, etc.. Strange.\nIntrigued, you trace your finger over the clues.",
-        "images": ["crossword.jpg"],
-        "hints": ["The rainbow you see is unique to your position. The angle of light hitting water droplets creates your personal rainbow, different from what someone else standing nearby might see.", "An acronym for acronym is A Contrived Reduction Of Nouns, Yielding Mnemonics."],
-        "answer": ["ROYGBIV"]
+        "text": "As you organize your thoughts, the pieces of the mystery start to align. Your gaze falls on a familiar toolbox, and a memory clicks into place:\nthe code—1234.\nA simple sequence, but one that feels significant. You jot it down, sensing it might unlock more than just a toolbox later.\nIt's 7 a.m. As the aroma of your morning coffee lingers, you scan the newspaper for clues.\nHeadlines blur past—nothing groundbreaking yet. But then, your eyes land on the crossword puzzle, unusually vibrant today.\nIntrigued, you trace your finger over the clues.",
+        "images": ["crossword.png"],
+        "hints": ["A boisterous clown does every foolish game: hurling icicles, juggling kaleidoscopes, laughing maniacally, neglecting old pants, quickly revealing sparkling tight underwear, vamping while x-raying your zebra."],
+        "answer": ["EONOIICOESAI"]
     },
     {
         "title": "Peculiar delivery",
-        "text": "With the crossword complete, you sit back, satisfied, when something catches your eye.\nAt the bottom of the page, tucked beside the puzzle's border, is a small ad. \nIt reads: \"Seafood Lovers Special! Your favorite catch is on sale—77% off! Simply use code 4567 and call our number to reel in this exclusive deal.\"\nYour stomach rumbles, but your mind spins faster. Why does this ad feel… deliberate? The code, seems eerily specific, like it's meant for more than a discount. Could this be another piece of the puzzle?\nYou grab your phone, call the number, and order your usual, already envisioning the perfect meal—a seafood feast paired with linguine.\nThe doorbell rings. That was fast, you think. But instead of the delivery you were expecting, you find a plain cardboard box waiting for you on the doorstep.\nCuriosity piqued, you bring it inside and open it carefully. Inside is not seafood, but a flash disk with what appears to be an <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://www.google.com\">url</a>. Your heart skips a beat. This wasn't part of the plan.\nPlugging it into your laptop, the screen flickers to life. Curiosity bubbling, you open the folder labeled \"Confidential\", spot a video file titled \"Interview.mp4.\", and click play. That's the culprit!",
+        "text": "With the crossword complete, you sit back, satisfied, but still curious.\nWhat is happening to all those people? It's all so mysterious. But you know from your training that it's important to talk to them to start piecing clues together.\nThen, suddenly the doorbell rings. You go to the door, and you find a package from Dr. Shuford waiting for you on the doorstep.\nCuriosity piqued, you bring it inside and open it carefully. Inside is a flash disk. Your heart skips a beat.\nPlugging it into your laptop, the screen flickers to life. The first thing it flashes is a code-4567. Curiosity bubbling, you open the folder labeled \"Confidential\", spot a video file titled <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://www.google.com\">Interview.mp4</a>, and click play.",
         "images": ["video.jpg"],
         "hints": ["Why don't shellfish share their pearls? - Because they're a little shellfish!"],
         "answer": ["Mussels"]
     },
     {
-        "title": "Location, Location, Location",
-        "text": "Where do you want to go next?",
-        "images": ["next_step.jpg"],
+        "title": "BREAKING NEWS: LOVE IS IN THE AIR… BUT SO IS FOOD POISONING?",
+        "text": "Valentine’s Day is supposed to leave you breathless… but not because you’re doubled over with stomach cramps. Health officials are investigating a mysterious illness affecting dozens of lovebirds who dined out in late January, early February. Reports suggest that many couples who shared a romantic seafood dinner are now sharing something far less pleasant—nausea, dizziness, and memory loss (which, for the record, is NOT a good excuse for forgetting your anniversary).\nIf you or your sweetheart wined and dined at a cozy, seafood-loving restaurant recently and are now regretting all your life choices, investigators are on the case. Could a certain shellfish dish have stolen more than just hearts this Valentine’s Day?\nDine in and find out!",
+        "images": ["restaurant.jpg"],
         "hints": [],
         "answer": ["Restaurant"]
     },
     {
-        "title": "A \"blank\" note?",
-        "text": "Once you piece together that the mussels were the culprit, you waste no time informing the authorities. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.\nOne officer approaches you with an odd discovery: a blank note found in the restaurant owner’s office. \"We think it’s more than it seems. The own must not be around much. The office is empty with only a desk and a shredder. By the way, when we left, the office door locked behind us,\" they say, handing it over. You examine it closely. The paper feels heavier than usual, and the edges are slightly frayed. Could it be a hidden message?\nWith the mysterious note offering no immediate answers, you decide to pivot. \"Let’s focus on the bigger picture,\" you say, turning to the officers. \"What other epidemiological evidence do we have?\"",
-        "images": ["odds_ratio.png"],
+        "title": "Food Inspector's Report",
+        "text": "Once you piece together that the mussels were the culprit, you waste no time informing the authorities. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.\nBetween [Date XXXX] and [Date XXXX], XXX individuals have presented with a mysterious illness of unknown origin. Affected individuals have reported a range of gastrointestinal symptoms, including diarrhea and vomiting, as well as neurological manifestations such as memory loss and dizziness. Preliminary epidemiological investigations suggest a possible link to a local restaurant, where a number of affected individuals dined prior to symptom onset. Of the XXXX patrons who ate at the establishment during the exposure period, XXXX remained asymptomatic, while the remainder developed illness. Further analysis is required to determine how dangerous this outbreak is and identify potential sources of contamination. Investigators are urged to analyze the provided data and calculate key epidemiologic measures to guide the ongoing outbreak response.",
+        "images": ["inspector.png"],
         "hints": [],
         "answer": ["1.77","0.77"]
     },
     {
-        "title": "Hidden message",
-        "text": "As you dive deeper into the calculation of the odds ratio, your thoughts keep drifting back to the blank note. It feels out of place, like it’s hiding something. On a whim, you glance at the officer nearby and ask, \"Do you happen to have a UV light?\"\nTo your surprise, she nods, pulling a compact toolbox from her bag. \"The code is 1234\" she adds.\nYour pulse quickens. You shine the UV light over the blank note, and like magic, hidden writing begins to glow. The faint, cryptic text reveals a message: \"destory the vendor list and lock away until further notice - high algal blooms, but i cannot afford to no make this shipment. it should be fine, haven't had a problem before, but just in case...\"\nWhere do you go next?",
-        "images": ["uv_light.jpg"],
+        "title": "Discovery",
+        "text": "Now that you've done your field calculations, you are beginning to realize the magnitude of this problem. These numbers represent real people who are getting sick.\nOne officer approaches you with an odd discovery found in the restaurant owner's office: an almost blank note with only the code XXXX written at the top. \"We think it’s more than it seems. The owner must not be around much. The office is empty with only a desk and a shredder. By the way, when we left, the office door locked behind us,\" they say, handing it over.\nWhere do you go next?",
+        "images": ["office.png"],
         "hints": [],
         "answer": ["Office"]
     },
     {
-        "title": "Encoded menu",
-        "text": "You head to the office, searching for the shredder, but it’s locked tight. Frustration bubbles up. But you remember that the owner is terrible with numbers. If set a code, she would’ve written it down somewhere she looks at every day.\nThen it hits you—the restaurant menu. It’s perched prominently on the desk, a daily fixture in her work routine. As you pick it up, something seems off. The items aren’t listed by numbers but by strange, cryptic codes.\nOne entry catches your eye. This must be the code!",
-        "images": ["menu.jpg"],
+        "title": "What's behind door number ...?",
+        "text": "You head to the office, searching for the shredder, but it’s locked tight. Frustration bubbles up, because you know the answer is behind this office door. But you remember that the owner is terrible with numbers. If she has set a code, she would’ve written it down somewhere she looks at every day.",
+        "images": ["door.png"],
         "hints": [],
-        "answer": ["ABCD"]
+        "answer": ["$33"]
     },
     {
         "title": "Shredder",
-        "text": "You punch in the code from the menu, and with a satisfying click, the office door swings open. Inside, the shredder sits ominously on the desk, its metallic surface glinting under the dim light. But your excitement is short-lived—a padlock secures the shredder, taunting you. Through the transparent bin, you can see shredded paper teasing you with its potential secrets. Could it be the vendor list you’ve been looking for?\nYour mind races. What could the code be? Out of nowhere, your thoughts drift to food, the seafood delivery you have yet to be received—maybe it’s the restaurant’s influence, or perhaps the anticipation of your linguine dinner waiting to be cooked.",
+        "text": "You punch in the code from the menu, and with a satisfying click, the office door swings open. Inside, the shredder sits ominously on the desk, its metallic surface glinting under the dim light. But your excitement is short-lived—a padlock secures the shredder, taunting you. Through the transparent bin, you can see shredded paper teasing you with its potential secrets.\nYour mind races. What could the code be?",
         "images": ["padlock.jpg"],
-        "hints": [],
+        "hints": ["Your thought drifts to Dr. Shuford's package."],
         "answer": ["1234"]
     },
     {
