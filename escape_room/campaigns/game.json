@@ -62,7 +62,7 @@
     },
     {
         "title": "Location, Location, Location",
-        "text": "With the code fresh in your mind, you steady your hand and input it into the padlock. A soft click echoes through the quiet office as the lock releases. You lift the shredder lid, revealing a crumpled vendor list beneath the shredded scraps. Relief washes over you as you gently pull the intact document out, its faintly creased surface hinting at its recent handling.\nScanning the list, you recognize familiar names. This is it!",
+        "text": "This is one of those fancy locks that requires two-codes. Here's the second half to unlock the padlock and reveal what's inside. Hopefully bringing us one step closer to solving this thing.\nYou steady your hand and input it into the padlock. A soft click echoes through the quiet office as the lock releases. You lift the shredder lid, revealing the vendor list among the shredded scraps. Relief washes over you as you gently pull the intact document out, its faintly creased surface hinting at its recent handling.\nScanning the list, you recognize familiar names. This is it!",
         "images": ["next_step.jpg"],
         "hints": [],
         "answer": ["Prince Edward Island"]
