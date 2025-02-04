@@ -77,7 +77,7 @@
     {
         "title": "But which one?",
         "text": "It's acidic! But which one?",
-        "images": ["chromatograms.jpg"],
+        "images": ["Potassium Hydroxide.png", "Benzylamine.png", "Nitroaniline.png", "Domoic Acid.png", "Citric Acid.png", "Malic Acid.png", "Thiourea.png", "Benzyl Alcohol.png", "Toluene.png"],
         "hints": [],
         "answer": ["Domoic acid"]
     }
