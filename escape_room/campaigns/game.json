@@ -1,25 +1,25 @@
 {
     "story": {
-        "title": "11:30 am, Friday, 02/02",
-        "text": "Good morning on this Ground Hog’s Day, Epidemiology Team. Thank you for taking the time to be here. As you know I am Jennifer Shuford, the Commissioner of the Texas Department of Health and Human Services.\nWe've just received an urgent report of a rapidly unfolding public health crisis and I need your help. We have a cluster of critically ill patients, and we may have an outbreak, but we are not sure.  I need your investigative skills to help sort through this.  The situation is escalating quickly, the governor wants answers now and CNN is calling me. I am getting reports from many regions and cases are climbing, and we need answers—now! The clock is ticking, and lives are at stake, we do not have much time.\nThat's why we're calling on you, our brightest and most talented epidemiology team, to step into action. Your mission: determine if there is an outbreak and if so investigate the source, define the cases, identify the agent, and recommend containment strategies so we can protect our public.  We need to stop this situation in its tracks.\nYou have limited time, the needed critical resources, and only your expertise to guide you. The health of Texans depends on you. We’re counting on you to solve the mystery and provide me with guidance needed to implement any measures needed to protect the public.\nThank you and good luck—get to work.",
+        "title": "Friday Feb. 2, 11:30 am",
+        "text": "<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://utsw.box.com/s/uya1hfaceho5hv96mpi557j2rxjzleeu\">Introduction video</a>\nGood morning on this Ground Hog’s Day, Epidemiology Team. Thank you for taking the time to be here. As you know I am Jennifer Shuford, the Commissioner of the Texas Department of Health and Human Services.\nWe've just received an urgent report of a rapidly unfolding public health crisis and I need your help. We have a cluster of critically ill patients, and we may have an outbreak, but we are not sure.  I need your investigative skills to help sort through this.  The situation is escalating quickly, the governor wants answers now and CNN is calling me. I am getting reports from many regions and cases are climbing, and we need answers—now! The clock is ticking, and lives are at stake, we do not have much time.\nThat's why we're calling on you, our brightest and most talented epidemiology team, to step into action. Your mission: determine if there is an outbreak and if so investigate the source, define the cases, identify the agent, and recommend containment strategies so we can protect our public.  We need to stop this situation in its tracks.\nYou have limited time, the needed critical resources, and only your expertise to guide you. The health of Texans depends on you. We’re counting on you to solve the mystery and provide me with guidance needed to implement any measures needed to protect the public.\nThank you and good luck—get to work.",
         "images": ["outbreak.png"]
     },
     "puzzles": [{
-        "title": "12:00 pm, Friday, 02/02",
+        "title": "Friday Feb. 2, 12:00 pm",
         "text": "As a budding outbreak investigator, ready to unravel the mystery, you know that outbreak investigation is like solving a complex puzzle and each piece represents a critical clue.\nYou will need to navigate through layers of deception, forgotten clues, unexpected twists, and time-sensitive decisions, short tempers, emotions and potential legal issues. Make sure you have your ID, your passport, your field notebook, mask and hand sanitizer.",
         "images": ["sherlock_holmes.jpg"],
         "hints": ["It's the right ingredients, but in the wrong order!-Sheldon Cooper", "Why was 10 scared? Because 7-8-9."],
         "answer": ["J-I-9-17-7-S-H-4-P-13"]
     },
     {
-        "title": "07:00 am, Saturday, 02/03",
+        "title": "Saturday Feb. 3, 07:00 am",
         "text": "As you organize your thoughts, the pieces of the mystery start to align.\nIt's 7 a.m. As the aroma of your morning coffee lingers, you scan the newspaper for clues.\nHeadlines blur past—nothing groundbreaking yet. But then, your eyes land on this poignant cartoon.\nIntrigued, you wonder what else is worth reading in the newspaper.",
         "images": ["poignant_cartoon.png"],
         "hints": ["A boisterous clown does every foolish game: hurling icicles, juggling kaleidoscopes, laughing maniacally, neglecting old pants, quickly revealing sparkling tight underwear, vamping while x-raying your zebra."],
-        "answer": ["EONOIICOESAI"]
+        "answer": ["POTATOFRIESKETCHUPNMAYO"]
     },
     {
-        "title": "11:00 am, Saturday, 02/03",
+        "title": "Saturday Feb. 3, 11:00 am",
         "text": "After reading your favorite section of the newspaper, you sit back, satisfied, but still curious.\nWhat is happening to all those people? It's all so mysterious. But you know from your training that it's important to talk to them to start piecing clues together.\nThen, suddenly you get a phone call from an intensivist at one of the teaching hospitals in town. To take the call you connect to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://www.google.com\">Interview1.mp4</a>.\nYou hang up the phone and speak with Dr. Cardigan who gives you a similar story and says that the patient reported eating at XXXXX 4 hours before symptoms started.  The patient is now comatose so you call the wife <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://www.google.com\">Interview2.mp4</a>.\nYou have now identified 18 individuals who ate with the second case. After interviewing the cases, developing a case definition, what should you send Dr. Shuford?",
         "images": ["video.jpg"],
         "hints": ["Investigation steps"],
@@ -27,45 +27,38 @@
     },
     {
         "title": "BREAKING NEWS: CNN is BREATHING DOWN YOUR BACK. THE REPORTER WAS AT A COCKTAIL PARTY AND HEARD ABOUT THESE CRITICALLY ILL PATIENTS?",
-        "text": "You are meanwhile tracking down some of the individuals who ate with the second case. Reported symptoms include—nausea, dizziness, and memory loss (which, for the record, is NOT a good excuse for forgetting your outbreak skills).\nYou speak with some of the individuals and find out <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://www.google.com\">Interview.mp4</a>.  You also get some additional critical information.",
+        "text": "Your colleague calls you and there are now 45 potential cases.\nDr. Shuford calls to tell you a case outside of your jurisdiction died.  You find out one of the cases reported to you has died and they want to know if there needs to be an autopsy.\nA reporter calls you and wants to know how many cases, what is the cause, what do the cases have and what was the cause of death?",
         "images": ["restaurant.jpg"],
         "hints": [],
-        "answer": ["Restaurant"]
+        "answer": ["Mussels", "Holder"]
     },
     {
-        "title": "Food Inspector's Report",
-        "text": "Once you piece together that the mussels were the culprit, you waste no time informing the authorities. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.\nBetween [Date XXXX] and [Date XXXX], XXX individuals have presented with a mysterious illness of unknown origin. Affected individuals have reported a range of gastrointestinal symptoms, including diarrhea and vomiting, as well as neurological manifestations such as memory loss and dizziness. Preliminary epidemiological investigations suggest a possible link to a local restaurant, where a number of affected individuals dined prior to symptom onset. Of the XXXX patrons who ate at the establishment during the exposure period, XXXX remained asymptomatic, while the remainder developed illness. Further analysis is required to determine how dangerous this outbreak is and identify potential sources of contamination. Investigators are urged to analyze the provided data and calculate key epidemiologic measures to guide the ongoing outbreak response.",
+        "title": "Sunday Feb. 4, 12:00 pm",
+        "text": "Once you piece together that the mussels were eaten by most of the cases, you waste no time calling your colleagues who can go to the restaurants. They respond swiftly, and soon you’re on your way to the restaurant at the heart of the outbreak. When you arrive, the scene is tense—officers are combing through the kitchen, inspecting storage areas, and questioning staff.  In addition, one case at mussels at home and the family was able to dig the shells out of the garbage.\nBased on the investigation thus far, we know that 45 individuals  presented with a mysterious illness between January 25 and February, the cause of which has not been identified.Affected individuals have reported a range of gastrointestinal symptoms, including diarrhea and vomiting, as well as neurological manifestations such as memory loss and dizziness. Preliminary epidemiological investigations suggests a possible link to a local restaurant, where a number of affected individuals dined prior to symptom onset. The food inspector gets additional information from the restaurant.  The restaurant owner has a large social media and was able to provide unofficial information to the food inspector.  Of the 250 patrons who ate at the establishment during the evening the index cases ate, 230 remained asymptomatic, while the remainder developed illness. Records showed that 30 people were served mussels; 18 of the people who responded ate mussels and french fries.   Further analysis is required to determine how dangerous this outbreak is and identify potential sources of contamination. Investigators need to provide  Dr. Shuford data supporting their hypothesis about the source of the illness.  After giving her the information you go home to think about next steps.",
         "images": ["inspector.png"],
         "hints": [],
-        "answer": ["1.77","0.77"]
+        "answer": ["60%", "163.5"]
     },
     {
-        "title": "Discovery",
-        "text": "Now that you've done your field calculations, you are beginning to realize the magnitude of this problem. These numbers represent real people who are getting sick.\nOne officer approaches you with an odd discovery found in the restaurant owner's office: an almost blank note with only the code XXXX written at the top. \"We think it’s more than it seems. The owner must not be around much. The office is empty with only a desk and a shredder. By the way, when we left, the office door locked behind us,\" they say, handing it over.\nWhere do you go next?",
-        "images": ["office.png"],
+        "title": "Monday Feb. 5, 10:00 am",
+        "text": "You return to the restaurant because you realize the magnitude and seriousness.  You also find out that another 15 potential cases were called into the office.  Another patient died overnight. You are numb, the numbers represent real people who are getting sick.\nDr. Shuford wonders if she should recall all mussels for the region given the deaths.\nYou want to find out the providence of the mussels.  An officer approaches you with an odd discovery found in the restaurant owner's office: a stack of invoices. \"We think it’s more than it seems. The owner must not be around much. The office is empty with only a desk and a shredder. By the way, when we left, the office door locked behind us.\"\nYou head to the office, the shredder is locked tight. Frustration bubbles up, because you know the answer is behind this office door. But you remember that the owner is terrible with numbers.",
+        "images": ["office.png", "door.png"],
         "hints": [],
-        "answer": ["Office"]
+        "answer": ["$29"]
     },
     {
-        "title": "What's behind door number ...?",
-        "text": "You head to the office, searching for the shredder, but it’s locked tight. Frustration bubbles up, because you know the answer is behind this office door. But you remember that the owner is terrible with numbers. If she has set a code, she would’ve written it down somewhere she looks at every day.",
-        "images": ["door.png"],
+        "title": "Monday Feb. 5, 11:00 am",
+        "text": "You punch in the code , and with a satisfying click, the office door swings open. Inside, the shredder sits ominously on the desk, its metallic surface glinting under the dim light. But your excitement is short-lived—a padlock secures the shredder, taunting you. Through the transparent bin, you can see shredded paper teasing you with its potential secrets.\nAnother case dies and get called with autopsy results that reveal neuronal necrosis or cell loss and astrocytosis which was most prominent in the hippocampus and amygdaloid nucleus.\nYour mind races. What could the code be?",
+        "images": ["autopsy.png"],
         "hints": [],
-        "answer": ["$33"]
-    },
-    {
-        "title": "Shredder",
-        "text": "You punch in the code from the menu, and with a satisfying click, the office door swings open. Inside, the shredder sits ominously on the desk, its metallic surface glinting under the dim light. But your excitement is short-lived—a padlock secures the shredder, taunting you. Through the transparent bin, you can see shredded paper teasing you with its potential secrets.\nYour mind races. What could the code be?",
-        "images": ["padlock.jpg"],
-        "hints": ["Your thought drifts to Dr. Shuford's package."],
-        "answer": ["1234"]
+        "answer": ["0004"]
     },
     {
         "title": "Location, Location, Location",
-        "text": "This is one of those fancy locks that requires two-codes. Here's the second half to unlock the padlock and reveal what's inside. Hopefully bringing us one step closer to solving this thing.\nYou steady your hand and input it into the padlock. A soft click echoes through the quiet office as the lock releases. You lift the shredder lid, revealing the vendor list among the shredded scraps. Relief washes over you as you gently pull the intact document out, its faintly creased surface hinting at its recent handling.\nScanning the list, you recognize familiar names. This is it!",
+        "text": "You steady your hand and input it into the padlock. A soft click echoes through the quiet office as the lock releases. You lift the shredder lid, revealing the vendor list among the shredded scraps. Relief washes over you as you gently pull the intact document out, its faintly creased surface hinting at its recent handling.\nScanning the list, you recognize familiar names. This is it!",
         "images": ["next_step.jpg"],
         "hints": [],
-        "answer": ["Prince Edward Island"]
+        "answer": ["Cardigan River, Prince Edward Island"]
     },
     {
         "title": "Budding chemist",
