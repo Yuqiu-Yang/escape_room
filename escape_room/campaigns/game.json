@@ -16,7 +16,7 @@
         "text": "As a budding outbreak investigator, ready to unravel the mystery, you know that outbreak investigation is like solving a complex puzzle and each piece represents a critical clue.\nYou will need to navigate through layers of deception, forgotten clues, unexpected twists, time-sensitive decisions, short tempers, emotions and potential legal issues. Make sure you have your ID, your passport, your field notebook, mask and hand sanitizer.",
         "images": ["sherlock_holmes.jpg"],
         "hints": [],
-        "answer": ["PVUCSFBL"]
+        "answer": ["OUTBREAK"]
     },
     {
         "title": "Saturday Feb. 3, 07:00 am",
@@ -34,7 +34,7 @@
     },
     {
         "title": "Sunday Feb. 4, 09:00 am",
-        "text": "BREAKING NEWS: CNN is BREATHING DOWN YOUR BACK. THE REPORTER WAS AT A COCKTAIL PARTY AND HEARD ABOUT THESE CRITICALLY ILL PATIENTS?\nYour colleague calls you and reports that are now 45 potential cases. \nDr. Cardigan calls to tell you a case died (Case 2).  20 minutes late Dr. Montague calls to say that Case 1 died.  He wants to know if there needs to be an autopsy. \nA reporter calls you and wants to know what the cause of the outbreak is, and what you know about the source. \nDr Shuford calls and wants an update of your hypothesis pronto!  You review the line list.",
+        "text": "BREAKING NEWS: CNN IS BREATHING DOWN YOUR BACK. THE REPORTER WAS AT A COCKTAIL PARTY AND HEARD ABOUT THESE CRITICALLY ILL PATIENTS?\nYour colleague calls you and reports that there are now 45 potential cases. \nDr. Cardigan calls to tell you a case died (Case 2).  20 minutes late Dr. Montague calls to say that Case 1 also died.  He wants to know if there needs to be an autopsy. \nA reporter calls you and wants to know what the cause of the outbreak is, and what you know about the source. \nDr. Shuford calls and wants an update of your hypothesis pronto!  You review the line list.",
         "images": ["restaurant.jpg"],
         "hints": [],
         "answer": ["Mussels", "Holder"]
