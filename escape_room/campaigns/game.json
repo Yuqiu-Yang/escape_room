@@ -58,7 +58,7 @@
         "text": "You want to know where the restaurant ordered their food. You hear a satisfying click; the office door swings open. . . \nAnother case dies and you get called with the autopsy results that reveal neuronal necrosis or cell loss and astrocytosis which was most prominent in the hippocampus and amygdaloid nucleus. They send you a copy of the slide from the hippocampus.  You remind yourself why those areas of the brain are important.  Seems weird for an infection. \nDr. Shuford texts again , \"how severe is this outbreak?\" ",
         "images": ["autopsy.png"],
         "hints": [],
-        "answer": ["0004"]
+        "answer": ["4"]
     },
     {
         "title": "Location, Location, Location",
@@ -77,7 +77,7 @@
     {
         "title": "But which one?",
         "text": "It's acidic! But which one?",
-        "images": ["Potassium Hydroxide.png", "Benzylamine.png", "Nitroaniline.png", "Domoic Acid.png", "Citric Acid.png", "Malic Acid.png", "Thiourea.png", "Benzyl Alcohol.png", "Toluene.png"],
+        "images": ["Domoic Acid.png"],
         "hints": [],
         "answer": ["Domoic acid"]
     }
