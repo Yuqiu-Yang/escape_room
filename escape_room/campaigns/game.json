@@ -36,7 +36,7 @@
         "title": "Sunday Feb. 4, 09:00 am",
         "text": "BREAKING NEWS: CNN IS BREATHING DOWN YOUR BACK. THE REPORTER WAS AT A COCKTAIL PARTY AND HEARD ABOUT THESE CRITICALLY ILL PATIENTS?\nYour colleague calls you and reports that there are now 45 potential cases. \nDr. Cardigan calls to tell you a case died (Case 2).  20 minutes late Dr. Montague calls to say that Case 1 also died.  He wants to know if there needs to be an autopsy. \nA reporter calls you and wants to know what the cause of the outbreak is, and what you know about the source. \nDr. Shuford calls and wants an update of your hypothesis pronto!  You review the line list.",
         "images": ["restaurant.jpg"],
-        "hints": [],
+        "hints": ["1 1"],
         "answer": ["Mussels", "Holder"]
     },
     {
