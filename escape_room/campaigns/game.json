@@ -70,7 +70,7 @@
     {
         "title": "Wednesday Feb. 7, 11:00 am",
         "text": "Arriving at Prince Edward Island, you’re greeted by the serene beauty of the mussel farm, a sharp contrast to the mystery that brought you here. With careful precision, you collect water samples from the farm, paying attention to the areas closest to where the mussels were harvested. The samples are sealed and transported back to a makeshift lab you’ve set up nearby.",
-        "images": ["litmus.jpg"],
+        "images": ["chemical.jpg"],
         "hints": [],
         "answer": ["Acidic"]
     },
